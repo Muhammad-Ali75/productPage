@@ -1,0 +1,95 @@
+@import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:  "avenir-next-lt-pro", sans-serif;
+}
+
+:root{
+    --blue:#00b2c9;
+    --green: #29b574;
+}
+
+header{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    height: 80px;
+    padding: 10px 2rem;
+}
+
+header .logo-image{
+    aspect-ratio: 24/9;
+    height: 50px
+}
+
+ nav a{
+    margin: 0 2rem;;
+    text-decoration: none;
+    color: black
+ }
+ nav .buy{
+    color: var(--blue);
+    font-weight: 600;
+ }
+
+  nav a:hover{
+    cursor: pointer;
+  }
+
+ header .nav-btn{
+     padding: 5px;
+     cursor:pointer;
+    color: var(--green);
+    background: white;
+    border: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.8rem;
+ }
+
+ header .cart-btn{
+    background-color: white;
+    color: var(--green);
+    visibility: visible;
+    opacity: 1;
+ }
+
+ @media only screen and (width  <= 1024px ){
+     header .nav-btn{
+        visibility: visible;
+        opacity: 1;
+     }
+     header nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: white;
+        gap:1.5rem;
+        transform: translateX(150vh);
+     }
+
+     header .responsive-nav{
+        transform: none;
+        transition: 0.5s; 
+
+     }
+     nav .nav-close-btn{
+        position: absolute;
+        top:2rem;
+        right: 2rem;
+     }
+     
+ }
+ @media only screen and (min-width: 1025px) {
+    header nav .responsive-nav {
+      transform: none !important;
+    }
+}

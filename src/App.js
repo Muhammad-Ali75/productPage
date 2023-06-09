@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <>
-      <NavBar />
       <div className="App">
+        <NavBar />
         <header className="App-header">LOREM</header>
       </div>
     </>
