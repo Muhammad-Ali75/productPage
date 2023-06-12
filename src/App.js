@@ -6,7 +6,6 @@ function App() {
     <>
       <div className="App">
         <NavBar />
-        <header className="App-header">LOREM</header>
       </div>
     </>
   );

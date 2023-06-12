@@ -1,5 +1,5 @@
 import personSVG from "../assets/person-outline.svg";
-import "./Button.css";
+import "../styles/Button.css";
 
 function AuthButton() {
   return (

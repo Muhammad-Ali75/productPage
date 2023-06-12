@@ -14,10 +14,15 @@
 
 header{
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     justify-content: space-between;
     height: 80px;
     padding: 10px 2rem;
+}
+.btn-container{
+   display: flex;
+   flex-direction: row;
+
 }
 
 header .logo-image{
@@ -70,10 +75,11 @@ header .logo-image{
         width: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         background-color: white;
         gap:1.5rem;
         transform: translateX(150vh);
+        padding-top: 80px;
      }
 
      header .responsive-nav{
@@ -81,6 +87,7 @@ header .logo-image{
         transition: 0.5s; 
 
      }
+     
      nav .nav-close-btn{
         position: absolute;
         top:2rem;
