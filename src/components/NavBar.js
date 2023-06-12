@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsBasket2 } from "react-icons/bs";
+import { HiOutlineChevronDown } from "react-icons/hi";
+
 import "../styles/navBar.css";
 import logoImage from "../assets/logo.png";
 import DropDown from "./DorpDown";
@@ -50,6 +52,7 @@ function NavBar() {
           onClick={closeMobileMenu}
         >
           About Us
+          <HiOutlineChevronDown className="downA" />
           {dropdown && <DropDown />}
         </a>
 
