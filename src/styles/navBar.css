@@ -24,6 +24,10 @@ header{
    flex-direction: row;
 
 }
+header nav{
+   display: flex;
+   align-items: center;
+}
 
 header .logo-image{
     aspect-ratio: 24/9;
@@ -31,9 +35,9 @@ header .logo-image{
 }
 
  nav a{
-    margin: 0 2rem;;
+    margin: 0 1rem;;
     text-decoration: none;
-    color: black
+    color: black;
  }
  nav .buy{
     color: var(--blue);
@@ -60,6 +64,11 @@ header .logo-image{
     color: var(--green);
     visibility: visible;
     opacity: 1;
+ }
+ .cardContainer{
+   display: flex;
+   justify-content:center;
+   align-items: center;
  }
 
  @media only screen and (width  <= 1024px ){

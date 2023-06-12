@@ -58,7 +58,7 @@ function NavBar() {
         </button>
       </nav>
       <Button />
-      <div>
+      <div className="cardContainer">
         <button className="nav nav-btn cart-btn">
           <BsBasket2 />
         </button>
