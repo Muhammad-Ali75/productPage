@@ -1,0 +1,12 @@
+.categoryContainer{
+    display: flex;
+    font-size: 35px;
+    align-items: center;
+    color: var(--blue);
+
+}
+.categoryContainer p{
+    font-size: 16px ;
+    color: black;
+    padding-left: 5px;
+}

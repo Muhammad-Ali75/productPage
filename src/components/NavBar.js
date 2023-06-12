@@ -34,7 +34,7 @@ function NavBar() {
   };
 
   return (
-    <header className="header">
+    <header>
       <img src={logoImage} alt="Logo" className="logo-image" />
       <nav ref={navRef}>
         <a href="/expert">Expert Sourcing</a>
@@ -58,7 +58,7 @@ function NavBar() {
         </button>
       </nav>
       <Button />
-      <div className="btn-container">
+      <div>
         <button className="nav nav-btn cart-btn">
           <BsBasket2 />
         </button>

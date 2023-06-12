@@ -7,7 +7,7 @@ function AuthButton() {
       <button className="btn reg">Register</button>
       <button className="btn sign">
         <img src={personSVG} alt="person-outline" />
-        <p>Sign In</p>
+        <p style={{ width: 50 }}>Sign In</p>
       </button>
     </div>
   );

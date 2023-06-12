@@ -1,0 +1,11 @@
+.containerSearch{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: 95%;
+    margin-top: 50px;
+    padding: 15px 30px;
+    background-color: #f2f2f2;
+    border-radius: 0.5rem;
+    justify-content: space-between;
+}

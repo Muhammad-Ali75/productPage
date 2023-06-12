@@ -1,0 +1,48 @@
+.searchInputContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 86%;
+
+}
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1rem;
+    width: 87%;
+    border: 1px solid #c8c7c7;
+    border-radius: 999px;
+    background-color: white;
+}
+
+.inputContainer input {
+    width: 75%;
+    height: 2.21rem;  
+    border:none;
+    font-size: 16px;
+}
+
+.inputContainer input:focus {
+    width: 75%;
+    height: 2.21rem;  
+    border:none;
+    outline: none;
+}
+.searchInputContainer .btn-search {
+    height: 2.21rem;
+    width: 7rem;
+    background: var(--blue);
+    color:white;
+    border-radius: 9999px ;
+    font-size:medium;
+    border:0px
+
+}
+
+.categoryDropdown{
+    padding: 0 1rem;
+    border-left: 1px solid #c8c7c7;
+    width: 25%;
+}

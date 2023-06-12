@@ -1,0 +1,44 @@
+.searchCategory{
+    width: 100%;
+    background-color: white;
+}
+
+
+.dropdown-toggle{
+height: 2.21rem;
+width: 100%;
+background: white;
+border-radius: 0px ;
+font-size:medium;
+border:0px;
+outline: none;
+justify-content: space-between;
+align-items: center;
+flex-direction: row;
+display: flex;
+}
+.downArrow{
+    font-size: 25px;
+    color: #cbd5e0;
+}
+.downArrowBtn{
+    display: flex;
+    width: 100%;
+}
+
+.dropdownList{
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    border:1px solid black
+}
+
+.dropdownList li{
+    font-size: medium;
+    padding: 5px;
+}
+
+.dropdownList li:hover{
+    background-color: rgb(255, 255, 255);
+    color:white
+}
