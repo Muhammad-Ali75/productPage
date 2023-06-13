@@ -15,8 +15,10 @@
 header {
    display: flex;
    align-items: center;
+   align-self: center;
    justify-content: space-between;
    height: 80px;
+   width: 84%;
    padding: 10px 2rem;
 }
 
