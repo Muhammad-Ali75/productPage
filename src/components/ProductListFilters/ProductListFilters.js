@@ -9,9 +9,10 @@ function ProductListFilters() {
         flexDirection: "row",
         display: "flex",
         alignSelf: "center",
+        paddingTop: "3rem",
       }}
     >
-      <FiltersSection />
+      {true && <FiltersSection />}
       <ProductSection />
     </div>
   );

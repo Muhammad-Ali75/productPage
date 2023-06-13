@@ -1,7 +1,7 @@
 import "./styles/App.css";
 import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
-import ProductListFilters from "./components/ProductListFilters";
+import ProductListFilters from "./components/ProductListFilters/ProductListFilters";
 
 function App() {
   return (

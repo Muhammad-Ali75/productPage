@@ -1,0 +1,8 @@
+.filterContainer {
+    width: 20rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.25rem;
+    min-height: 200px;
+    padding: 1.25rem;
+    margin-right: 2rem;
+}
