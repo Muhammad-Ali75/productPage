@@ -14,10 +14,7 @@ function NavBar() {
   function showNavBar() {
     navRef.current.classList.toggle("responsive-nav");
   }
-  const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-
-  const closeMobileMenu = () => setClick(!click);
 
   const onMouseEnter = () => {
     if (window.innerWidth < 1024) {
@@ -45,16 +42,11 @@ function NavBar() {
           Buy
         </a>
         <a href="/finance">Financing</a>
-        <a
-          href="/about"
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          onClick={closeMobileMenu}
-        >
+        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           About Us
           <HiOutlineChevronDown className="downA" />
           {dropdown && <DropDown />}
-        </a>
+        </div>
 
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
           <FaTimes />
