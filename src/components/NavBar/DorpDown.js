@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/dropDown.css";
+import "./styles/dropDown.css";
 
 function DropDown() {
   const [click, setClick] = useState(false);

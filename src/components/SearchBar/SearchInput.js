@@ -1,4 +1,4 @@
-import "../styles/SearchInput.css";
+import "./styles/SearchInput.css";
 import SearchCategory from "./SearchCategory";
 
 function SeachInput() {

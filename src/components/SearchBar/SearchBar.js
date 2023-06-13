@@ -1,6 +1,6 @@
 import CatergoryDropdown from "./CategoryDropdown";
 import SeachInput from "./SearchInput";
-import "../styles/SearchBar.css";
+import "./styles/SearchBar.css";
 
 function SearchBar() {
   return (

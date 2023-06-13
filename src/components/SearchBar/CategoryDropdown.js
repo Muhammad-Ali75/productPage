@@ -1,5 +1,5 @@
 import { BiCategory } from "react-icons/bi";
-import "../styles/CategoryDropdown.css";
+import "./styles/CategoryDropdown.css";
 function CatergoryDropdown() {
   return (
     <div className="categoryContainer">

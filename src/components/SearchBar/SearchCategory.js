@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HiOutlineChevronDown } from "react-icons/hi";
-import "../styles/searchCatergory.css";
+import "./styles/searchCatergory.css";
 
 const SearchCategory = () => {
   const [isOpen, setIsOpen] = useState(false);
