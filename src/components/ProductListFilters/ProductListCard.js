@@ -1,3 +1,4 @@
+import usFlag from "../../assets/usaflag.svg";
 function ProductListCard() {
   return (
     <div
@@ -17,6 +18,16 @@ function ProductListCard() {
         alt="productImg"
         style={{ height: "auto", width: "auto", maxHeight: "100%" }}
       />
+      <div>
+        <p>title</p>
+        <div>
+          <img src={usFlag} alt="us-flag" />
+        </div>
+        <p>moq</p>
+        <p>price</p>
+
+        <button>Add to cart</button>
+      </div>
     </div>
   );
 }
