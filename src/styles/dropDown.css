@@ -6,20 +6,20 @@
   list-style: none;
   text-align: start;
 }
-  
+
 .dropdown-menu li {
   background: #1888ff;
   cursor: pointer;
 }
-  
+
 .dropdown-menu li:hover {
   background: #5cabff;
 }
-  
+
 .dropdown-menu.clicked {
   display: none;
 }
-  
+
 .dropdown-link {
   display: block;
   height: 100%;
@@ -28,7 +28,7 @@
   color: #fff;
   padding: 16px;
 }
-  
+
 @media screen and (max-width: 1024px) {
   .fa-caret-down {
     display: none;

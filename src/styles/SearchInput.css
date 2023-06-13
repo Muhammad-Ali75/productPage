@@ -1,4 +1,4 @@
-.searchInputContainer{
+.searchInputContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -6,6 +6,7 @@
     width: 86%;
 
 }
+
 .inputContainer {
     display: flex;
     flex-direction: row;
@@ -19,29 +20,29 @@
 
 .inputContainer input {
     width: 75%;
-    height: 2.21rem;  
-    border:none;
+    height: 2.21rem;
+    border: none;
     font-size: 16px;
 }
 
 .inputContainer input:focus {
     width: 75%;
-    height: 2.21rem;  
-    border:none;
+    height: 2.21rem;
+    border: none;
     outline: none;
 }
+
 .searchInputContainer .btn-search {
     height: 2.21rem;
     width: 7rem;
     background: var(--blue);
-    color:white;
-    border-radius: 9999px ;
-    font-size:medium;
-    border:0px
-
+    color: white;
+    border-radius: 9999px;
+    font-size: medium;
+    border: 0px
 }
 
-.categoryDropdown{
+.categoryDropdown {
     padding: 0 1rem;
     border-left: 1px solid #c8c7c7;
     width: 25%;
