@@ -3,7 +3,7 @@ import "./styles/ProductGridCard.css";
 
 function ProductGridCard({
   title,
-  isUsa = true,
+  isUsa = false,
   moq = 1000,
   lowPrice = 1,
   highPrice = 200,
@@ -16,12 +16,16 @@ function ProductGridCard({
         className="imageStyle"
       />
       <div className="infoContainer">
-        {isUsa && (
-          <div className="usflagContainer">
-            <img src={usFlag} alt="us-flag" className="usFlagStyle" />
-            <p className="usFlagText">Stock in USA</p>
-          </div>
-        )}
+        <div className="usflagContainer">
+          {isUsa && (
+            <>
+              {" "}
+              <img src={usFlag} alt="us-flag" className="usFlagStyle" />
+              <p className="usFlagText">Stock in USA</p>
+            </>
+          )}
+        </div>
+
         <p className="titleStyle">
           {title ||
             "TITLE lorem ips lorem ipsum dolor sit amet, consectetur adip lorem sit"}

@@ -2,6 +2,7 @@ import "./styles/App.css";
 import NavBar from "./components/NavBar/NavBar";
 import SearchBar from "./components/SearchBar/SearchBar";
 import ProductListFilters from "./components/ProductListFilters/ProductListFilters";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <NavBar />
         <SearchBar />
         <ProductListFilters />
+        <Footer />
       </div>
     </>
   );

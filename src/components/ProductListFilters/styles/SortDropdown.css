@@ -31,7 +31,9 @@
 
 .sortDropdownList {
     position: absolute;
-    top: 375px;
+    margin-top: 0.3rem;
+    padding-left: 0.5rem;
+    top: 405px;
     background-color: white;
     list-style: none;
     border: 1px solid #e2e8f0;

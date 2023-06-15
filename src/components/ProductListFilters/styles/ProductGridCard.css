@@ -28,7 +28,8 @@
 .usflagContainer {
   flex-direction: row;
   display: flex;
-  padding-bottom: 5px
+  padding-bottom: 5px;
+  min-height: 2.5rem
 }
 
 .usFlagStyle {

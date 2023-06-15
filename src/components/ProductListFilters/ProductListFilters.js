@@ -9,7 +9,7 @@ function ProductListFilters() {
         flexDirection: "row",
         display: "flex",
         alignSelf: "center",
-        paddingTop: "3rem",
+        margin: "5rem 0rem",
       }}
     >
       {true && <FiltersSection />}

@@ -1,8 +1,6 @@
-import { useState } from "react";
-import { BsFillGrid3X2GapFill } from "react-icons/bs";
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { FaList } from "react-icons/fa";
 import "./styles/SortSection.css";
+import { BsFillGrid3X2GapFill } from "react-icons/bs";
+import { FaList } from "react-icons/fa";
 import SortDropdown from "./SortDropdown";
 import Pagination from "./Pagination";
 
