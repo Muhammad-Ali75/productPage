@@ -4,20 +4,9 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { FaList } from "react-icons/fa";
 import "./styles/SortSection.css";
 import SortDropdown from "./SortDropdown";
+import Pagination from "./Pagination";
 
 function SortSection({ view, set }) {
-  const [{ currentPage, totalPage }, setPage] = useState({
-    currentPage: 1,
-    totalPage: 5,
-  });
-
-  const handlePageChange = (sign) => {
-    if (sign === "+" && currentPage < totalPage) {
-      setPage((prev) => ({ ...prev, currentPage: prev.currentPage + 1 }));
-    } else if (sign === "-" && currentPage > 1) {
-      setPage((prev) => ({ ...prev, currentPage: prev.currentPage - 1 }));
-    }
-  };
   return (
     <div className="sortContainer">
       <div className="viewContainer">
@@ -33,18 +22,7 @@ function SortSection({ view, set }) {
       </div>
       <div className="sortPagination">
         <SortDropdown />
-        <div className="paginationContainer">
-          <button onClick={() => handlePageChange("-")}>
-            <FiChevronLeft />
-          </button>
-
-          <div className="currentPage">{currentPage}</div>
-          <p>of {totalPage}</p>
-
-          <button onClick={() => handlePageChange("+")}>
-            <FiChevronRight />
-          </button>
-        </div>
+        <Pagination />
       </div>
     </div>
   );

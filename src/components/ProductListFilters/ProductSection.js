@@ -2,6 +2,7 @@ import { useState } from "react";
 import SortSection from "./SortSection";
 import ProductList from "./ProductList";
 import "./styles/ProductSection.css";
+import Pagination from "./Pagination";
 
 function ProductSection() {
   const [view, setView] = useState("grid");
@@ -22,6 +23,9 @@ function ProductSection() {
       {false && <div className="loadingContainer">Loading...</div>}
       <SortSection view={view} set={handleSet} />
       <ProductList view={view} />
+      <div style={{ alignSelf: "flex-end" }}>
+        <Pagination />
+      </div>
     </div>
   );
 }
