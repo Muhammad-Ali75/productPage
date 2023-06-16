@@ -19,6 +19,7 @@ header {
    justify-content: space-between;
    height: 80px;
    width: 100%;
+   max-width: 1550px;
    padding: 2rem 0rem;
 }
 
@@ -34,8 +35,8 @@ header nav {
 }
 
 header .logo-image {
-   aspect-ratio: 24/9;
-   height: 50px
+   height: 3.5rem;
+   width: 10.5rem;
 }
 
 nav a {

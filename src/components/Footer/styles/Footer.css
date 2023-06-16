@@ -1,10 +1,12 @@
 /* Footer container */
 
 .footer {
-
+    display: flex;
+    justify-content: center;
     background-color: #f2f2f2;
-    padding: 20px 0;
-    margin: 10rem 0rem,
+    padding: 20px 0 0 0;
+    margin: 10rem 0 0 0;
+    width: 100%
 }
 
 .footer-content {
@@ -17,7 +19,6 @@
     flex-direction: column;
     width: 100%;
     padding: 0 20px;
-
 }
 
 .logo-img {

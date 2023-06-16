@@ -11,8 +11,8 @@ function App() {
         <NavBar />
         <SearchBar />
         <ProductListFilters />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }

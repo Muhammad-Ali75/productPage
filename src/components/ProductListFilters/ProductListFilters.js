@@ -6,6 +6,7 @@ function ProductListFilters() {
     <div
       style={{
         width: "100%",
+        maxWidth: "1550px",
         flexDirection: "row",
         display: "flex",
         alignSelf: "center",
