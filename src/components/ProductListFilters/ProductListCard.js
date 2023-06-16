@@ -1,4 +1,6 @@
+import "./styles/ProductListCard.css";
 import usFlag from "../../assets/usaflag.svg";
+
 function ProductListCard({
   title = "title",
   isUsa = true,
@@ -7,19 +9,7 @@ function ProductListCard({
   highPrice = 200,
 }) {
   return (
-    <div
-      style={{
-        width: "100%",
-        height: "10rem",
-        border: "1px solid #e2e8f0",
-        borderRadius: 5,
-        marginBottom: 10,
-        display: "flex",
-        flexDirection: "row",
-        alignItems: "center",
-        padding: "0.5rem",
-      }}
-    >
+    <div className="listCardContainer">
       <img
         src="https://tbh-production.s3.ap-southeast-1.amazonaws.com/Product/2034888965/Images/16066601421950233806.png"
         alt="productImg"
@@ -48,23 +38,7 @@ function ProductListCard({
           $ {highPrice ? `${lowPrice} - $ ${highPrice}` : lowPrice} / Peices
         </h3>
 
-        <button
-          style={{
-            width: "9rem",
-            height: "2rem",
-            fontSize: 16,
-            fontWeight: 400,
-            background: "#00b2c9",
-            color: "white",
-            borderRadius: 8,
-            border: "0px",
-            padding: 4,
-            paddingLeft: 24,
-            paddingRight: 24,
-          }}
-        >
-          Add to cart
-        </button>
+        <button className="addCartBtn">Add to cart</button>
       </div>
     </div>
   );
