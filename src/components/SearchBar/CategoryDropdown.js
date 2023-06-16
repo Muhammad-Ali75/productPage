@@ -3,7 +3,10 @@ import "./styles/CategoryDropdown.css";
 function CatergoryDropdown({ open, set }) {
   return (
     <>
-      <button className="categoryContainer" onClick={set}>
+      <button
+        className={!open ? "categoryContainer" : "categoryContainer open"}
+        onClick={set}
+      >
         <BiCategory />
         <p>Categories</p>
       </button>
