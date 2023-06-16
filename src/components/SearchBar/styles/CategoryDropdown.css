@@ -3,7 +3,7 @@
     font-size: 35px;
     align-items: center;
     color: var(--blue);
-
+    border: 0
 }
 
 .categoryContainer p {

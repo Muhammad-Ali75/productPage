@@ -1,11 +1,13 @@
 import { BiCategory } from "react-icons/bi";
 import "./styles/CategoryDropdown.css";
-function CatergoryDropdown() {
+function CatergoryDropdown({ open, set }) {
   return (
-    <div className="categoryContainer">
-      <BiCategory />
-      <p>Categories</p>
-    </div>
+    <>
+      <button className="categoryContainer" onClick={set}>
+        <BiCategory />
+        <p>Categories</p>
+      </button>
+    </>
   );
 }
 
