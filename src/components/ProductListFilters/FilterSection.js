@@ -1,7 +1,7 @@
 import { useState } from "react";
-import CheckBoxFilters from "./CheckBoxFilters";
 import "./styles/FilterSection.css";
 import CheckboxGroup from "./CheckBoxFilters";
+import usFlag from "../../assets/usaflag.svg";
 
 function FiltersSection() {
   const filtersList = {
@@ -93,6 +93,7 @@ function FiltersSection() {
       {/* Product Certifications */}
       <CheckboxGroup
         title={"Product Certification"}
+        placeholder={"Product Certification"}
         options={filtersList.productCertification}
         selectedValues={productCertifications}
         onChange={handleProductCertificationsChange}
@@ -101,6 +102,7 @@ function FiltersSection() {
       {/* Supplier Certifications */}
       <CheckboxGroup
         title={"Supplier Certification"}
+        placeholder={"Supplier Certification"}
         options={filtersList.supplierCertification}
         selectedValues={supplierCertifications}
         onChange={handleSupplierCertificationsChange}
@@ -109,13 +111,20 @@ function FiltersSection() {
       {/* Manufacturer Location */}
       <CheckboxGroup
         title={"Manufacturer Location"}
+        placeholder={"Manufacturer Location"}
         options={filtersList.manufacturerLocation}
         selectedValues={manufacturerLocations}
         onChange={handleManufacturerLocationsChange}
       />
       {/* Stock Availability */}
-      <CheckBoxFilters />
-      <div className="stockAvailContainer"></div>
+      <div className="stockAvailContainer">
+        <h3>Stock Availability</h3>
+        <label>
+          <input type="checkbox" />
+          <img src={usFlag} alt="us-logo" />
+          In USA
+        </label>
+      </div>
     </div>
   );
 }
