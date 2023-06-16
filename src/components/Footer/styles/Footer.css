@@ -156,10 +156,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2.5rem;
+    width: 4.1rem;
+    margin-left: 4px;
     background-image: url("../../../assets/ach-bg.png");
     background-size: auto;
-    height: auto;
-    width: auto;
+    background-repeat: no-repeat;
 }
 
 
@@ -170,11 +172,12 @@
     justify-content: space-between;
     margin-top: 80px;
     padding: 2rem 1rem;
-    border-top: 1px solid #333;
+    border-top: 1px solid black;
+    opacity: 0.4;
+
 }
 
 .footer-bottom p {
-    color: #666;
     font-size: 1rem;
     margin: 0;
 }

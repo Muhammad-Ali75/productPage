@@ -4,7 +4,6 @@ import visa from "../../assets/visa.png";
 import masterCard from "../../assets/master-card.png";
 import ach from "../../assets/ach.png";
 import americanExpress from "../../assets/american-express.png";
-
 import { RiFacebookFill, RiLinkedinFill } from "react-icons/ri";
 
 function Footer() {

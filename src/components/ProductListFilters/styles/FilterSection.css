@@ -5,4 +5,90 @@
     min-height: 200px;
     padding: 1.25rem;
     margin-right: 2rem;
+    height: fit-content;
+    overflow: hidden;
 }
+
+
+/* Price  */
+.priceContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.priceContainer h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.priceRangeContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.priceRange {
+    justify-content: space-between;
+    max-width: 9rem;
+    max-height: 2.5rem;
+    background-color: #f2f2f2;
+}
+
+.priceRange p {
+    font-size: 14px;
+}
+
+.dashed {
+    margin: 0px 0.25rem;
+    opacity: 0.2;
+    border-top: 1px solid #000000;
+    width: 2rem;
+    height: 1px;
+}
+
+
+
+/* MOQ */
+.moqContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.moqContainer h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.moqInput {
+    height: 2.5rem;
+    width: 17.3rem;
+    margin-top: 1rem;
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: none;
+    text-align: center;
+    font-size: 14px;
+    background-color: #f2f2f2;
+}
+
+
+/* Stock Available */
+
+.stockAvailContainer {}
