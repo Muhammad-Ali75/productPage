@@ -2,7 +2,7 @@ import "./styles/ProductListCard.css";
 import usFlag from "../../assets/usaflag.svg";
 
 function ProductListCard({
-  title = "title",
+  title,
   isUsa = true,
   moq = 1000,
   lowPrice = 1,
@@ -13,10 +13,10 @@ function ProductListCard({
       <img
         src="https://tbh-production.s3.ap-southeast-1.amazonaws.com/Product/2034888965/Images/16066601421950233806.png"
         alt="productImg"
-        style={{ height: "auto", width: "auto", maxHeight: "9rem" }}
+        className="product-image"
       />
-      <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
-        <p style={{ paddingBottom: 5 }}>{title || "TITLE"}</p>
+      <div className="info-container">
+        <p className="title-text">{title || "TITLE lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 "}</p>
         {isUsa && (
           <div
             style={{ flexDirection: "row", display: "flex", paddingBottom: 5 }}

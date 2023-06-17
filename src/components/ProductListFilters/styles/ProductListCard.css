@@ -17,6 +17,26 @@
 
 }
 
+.product-image{ 
+    height: auto;
+     width: "auto";
+      max-height: 9rem
+    }
+.info-container{ 
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+     }
+.title-text{ 
+    padding-bottom: 5;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    
+ }
+
 .addCartBtn {
     width: 9rem;
     height: 2rem;

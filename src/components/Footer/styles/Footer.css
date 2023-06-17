@@ -12,12 +12,15 @@
 .footer-content {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: auto;
+    gap: 1rem;
 }
 
 .footer-container {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    max-width: 450px;
     padding: 0 20px;
 }
 
@@ -98,7 +101,7 @@
 
 /* Footer links */
 .footer-links {
-    width: 50%;
+    max-width: 450px;
 }
 
 .footer-links h3 {
@@ -121,6 +124,7 @@
 /* Footer locations */
 .footer-locations {
     width: 50%;
+    max-width: 250px;
 }
 
 .footer-locations h3 {

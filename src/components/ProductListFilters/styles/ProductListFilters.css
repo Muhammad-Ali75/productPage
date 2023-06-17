@@ -1,0 +1,8 @@
+.product-list-filter-container{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    width: auto;
+    margin: 5rem 0rem;
+    max-width: 1550px;
+  }

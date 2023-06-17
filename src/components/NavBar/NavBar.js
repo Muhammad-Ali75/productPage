@@ -33,33 +33,35 @@ function NavBar() {
   };
 
   return (
-    <header>
-      <img src={logoImage} alt="Logo" className="logo-image" />
-      <nav ref={navRef}>
-        <a href="/expert">Expert Sourcing</a>
-        <a href="/contact">Contract Manufacturing</a>
-        <a href="/buy" className="buy">
-          Buy
-        </a>
-        <a href="/finance">Financing</a>
-        <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          About Us
-          <HiOutlineChevronDown className="downA" />
-          {dropdown && <DropDown />}
-        </div>
+    <header >
+      <div className="navbar-content">
+        <img src={logoImage} alt="Logo" className="logo-image" />
+        <nav ref={navRef}>
+          <a href="/expert">Expert Sourcing</a>
+          <a href="/contact">Contract Manufacturing</a>
+          <a href="/buy" className="buy">
+            Buy
+          </a>
+          <a href="/finance">Financing</a>
+          <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            About Us
+            <HiOutlineChevronDown className="downA" />
+            {dropdown && <DropDown />}
+          </div>
 
-        <button className="nav-btn nav-close-btn" onClick={showNavBar}>
-          <FaTimes />
-        </button>
-      </nav>
-      <Button />
-      <div className="cardContainer">
-        <button className="nav nav-btn cart-btn">
-          <BsBasket2 />
-        </button>
-        <button className="nav-btn" onClick={showNavBar}>
-          <FaBars />
-        </button>
+          <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+            <FaTimes />
+          </button>
+        </nav>
+        <Button />
+        <div className="cardContainer">
+          <button className="nav nav-btn cart-btn">
+            <BsBasket2 />
+          </button>
+          <button className="nav-btn" onClick={showNavBar}>
+            <FaBars />
+          </button>
+        </div>
       </div>
     </header>
   );

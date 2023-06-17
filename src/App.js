@@ -7,11 +7,11 @@ import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
-      <div className="App">
-        <NavBar />
+      <NavBar />
+      {/* <div className="App">
         <SearchBar />
         <ProductListFilters />
-      </div>
+      </div> */}
       <Footer />
     </>
   );

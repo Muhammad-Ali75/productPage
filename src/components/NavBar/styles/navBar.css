@@ -14,13 +14,17 @@
 
 header {
    display: flex;
+   justify-content: center;
+   padding: 2rem 6rem;
+}
+
+.navbar-content{
+   display: flex;
    align-items: center;
-   align-self: center;
    justify-content: space-between;
    height: 80px;
    width: 100%;
    max-width: 1550px;
-   padding: 2rem 0rem;
 }
 
 .btn-container {

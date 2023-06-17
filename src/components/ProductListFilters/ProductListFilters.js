@@ -1,18 +1,10 @@
+import "./styles/ProductListFilters.css"
 import FiltersSection from "./FilterSection";
 import ProductSection from "./ProductSection";
 
 function ProductListFilters() {
   return (
-    <div
-      style={{
-        width: "100%",
-        maxWidth: "1550px",
-        flexDirection: "row",
-        display: "flex",
-        alignSelf: "center",
-        margin: "5rem 0rem",
-      }}
-    >
+    <div className="product-list-filter-container">
       {true && <FiltersSection />}
       <ProductSection />
     </div>
