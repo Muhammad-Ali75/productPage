@@ -8,10 +8,10 @@ function App() {
   return (
     <>
       <NavBar />
-      {/* <div className="App">
+      <div className="App">
         <SearchBar />
         <ProductListFilters />
-      </div> */}
+      </div>
       <Footer />
     </>
   );

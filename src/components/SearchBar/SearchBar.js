@@ -22,109 +22,110 @@ function SearchBar() {
           {/* PPE List */}
 
           <div>
-            <h4>PPE</h4>
+            <h4 onClick={handleSetOpen}>PPE</h4>
             <ul>
-              <li>Beard Covers</li>
-              <li>Coverall</li>
-              <li>Face Mask</li>
-              <li>Face Shield</li>
-              <li>Gloves</li>
-              <li>Goggles</li>
-              <li>Gown</li>
-              <li>Head Cover</li>
-              <li>Mask Straps</li>
-              <li>PPE Kit</li>
-              <li>Shoe Cover</li>
-              <li>Surgical Scrubs</li>
-            </ul>
-          </div>
+              <li onClick={handleSetOpen}>Beard Covers</li>
+              <li onClick={handleSetOpen}>Coverall</li>
+              <li onClick={handleSetOpen}>Face Mask</li>
+              <li onClick={handleSetOpen}>Face Shield</li>
+              <li onClick={handleSetOpen}>Gloves</li>
+              <li onClick={handleSetOpen}>Goggles</li>
+              <li onClick={handleSetOpen}>Gown</li>
+              <li onClick={handleSetOpen}>Head Cover</li>
+              <li onClick={handleSetOpen}>Mask Straps</li>
+              <li onClick={handleSetOpen}>PPE Kit</li>
+              <li onClick={handleSetOpen}>Shoe Cover</li>
+              <li onClick={handleSetOpen}>Surgical Scrubs</li>
+            </ul >
+          </div >
 
           {/* Health & Medical */}
 
           <div>
-            <h4>Health & Medical</h4>
+            <h4 onClick={handleSetOpen}>Health & Medical</h4>
             <ul>
-              <li>Adult Diapers</li>
-              <li>Air Purifiers</li>
-              <li>Barriers</li>
-              <li>Body Bags</li>
-              <li>Covid Test Kits</li>
-              <li>Disinfection Tunnels</li>
-              <li>Hand Sanitizer</li>
-              <li>Medical Equipment & Hospital Supplies</li>
-              <li>Oximeter</li>
-              <li>Oxygen Regulators</li>
-              <li>Sanitizer Sprays & Bottles</li>
-              <li>Sanitizing Grips</li>
-              <li>Sterilizer</li>
-              <li>Syringe</li>
-              <li>Thermometer</li>
-              <li>Wipes</li>
+              <li onClick={handleSetOpen}>Adult Diapers</li>
+              <li onClick={handleSetOpen}>Air Purifiers</li>
+              <li onClick={handleSetOpen}>Barriers</li>
+              <li onClick={handleSetOpen}>Body Bags</li>
+              <li onClick={handleSetOpen}>Covid Test Kits</li>
+              <li onClick={handleSetOpen}>Disinfection Tunnels</li>
+              <li onClick={handleSetOpen}>Hand Sanitizer</li>
+              <li onClick={handleSetOpen}>Medical Equipment & Hospital Supplies</li >
+              <li onClick={handleSetOpen}>Oximeter</li>
+              <li onClick={handleSetOpen}>Oxygen Regulators</li>
+              <li onClick={handleSetOpen}>Sanitizer Sprays & Bottles</li >
+              <li onClick={handleSetOpen}>Sanitizing Grips</li>
+              <li onClick={handleSetOpen}>Sterilizer</li>
+              <li onClick={handleSetOpen}>Syringe</li>
+              <li onClick={handleSetOpen}>Thermometer</li>
+              <li onClick={handleSetOpen}>Wipes</li>
             </ul>
-          </div>
+          </div >
 
           {/* Garden & Outdoor */}
 
-          <div>
-            <h4>Garden & Outdoor</h4>
+          <div >
+            <h4 onClick={handleSetOpen}>Garden & Outdoor</h4>
             <ul>
-              <li>Deck Boxes</li>
-              <li>Outdoor Decor</li>
-              <li>Patio Furniture & Accessories</li>
-            </ul>
-          </div>
+              <li onClick={handleSetOpen}>Deck Boxes</li>
+              <li onClick={handleSetOpen}>Outdoor Decor</li>
+              <li onClick={handleSetOpen}>Patio Furniture & Accessories</li>
+            </ul >
+          </div >
 
           {/* Sports & Fitness */}
 
-          <div>
-            <h4>Sports & Fitness</h4>
+          <div >
+            <h4 onClick={handleSetOpen}>Sports & Fitness</h4>
             <ul>
-              <li>Pilates</li>
-              <li>Strength Training Equipment</li>
+              <li onClick={handleSetOpen}>Pilates</li>
+              <li onClick={handleSetOpen}>Strength Training Equipment</li>
             </ul>
-          </div>
+          </div >
 
           {/* Other */}
 
-          <div>
-            <h4>Other</h4>
+          <div  >
+            <h4 onClick={handleSetOpen}>Other</h4>
             <ul>
-              <li>Miscellaneous</li>
-            </ul>
-          </div>
+              <li onClick={handleSetOpen}>Miscellaneous</li>
+            </ul >
+          </div >
 
           {/* Baby */}
 
-          <div>
-            <h4>Baby</h4>
+          <div >
+            <h4 onClick={handleSetOpen}>Baby</h4>
             <ul>
-              <li>Feeding Products</li>
-            </ul>
-          </div>
+              <li onClick={handleSetOpen}>Feeding Products</li>
+            </ul >
+          </div >
 
           {/* Beauty & Personal Care */}
 
-          <div>
-            <h4>Beauty & Personal Care</h4>
+          <div >
+            <h4 onClick={handleSetOpen}>Beauty & Personal Care</h4>
             <ul>
-              <li>Electric Copper Combs</li>
-              <li>Eyebrow Trimmers</li>
-              <li>Feminine Care</li>
-              <li> Skin Care</li>
+              <li onClick={handleSetOpen}>Electric Copper Combs</li>
+              <li onClick={handleSetOpen}>Eyebrow Trimmers</li>
+              <li onClick={handleSetOpen}>Feminine Care</li>
+              <li onClick={handleSetOpen}> Skin Care</li>
             </ul>
-          </div>
+          </div >
 
           {/* Home, Kitchen & Office */}
 
-          <div>
-            <h4>Home, Kitchen & Office</h4>
+          <div >
+            <h4 onClick={handleSetOpen}>Home, Kitchen & Office</h4>
             <ul>
-              <li>Home & Office Decor</li>
-            </ul>
-          </div>
-        </div>
-      )}
-    </div>
+              <li onClick={handleSetOpen}>Home & Office Decor</li>
+            </ul >
+          </div >
+        </div >
+      )
+      }
+    </div >
   );
 }
 

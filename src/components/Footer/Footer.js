@@ -21,7 +21,7 @@ function Footer() {
 
             <label>
               Email
-              <a style={{ color: "red" }} href="#">*</a>
+              <a style={{ color: "red" }} href="/team">*</a>
             </label>
             <input />
             <button type="submit">Submit</button>

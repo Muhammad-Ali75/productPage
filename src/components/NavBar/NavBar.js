@@ -16,6 +16,10 @@ function NavBar() {
   }
   const [dropdown, setDropdown] = useState(false);
 
+  function toggleDropdown() {
+    setDropdown(!dropdown)
+  }
+
   const onMouseEnter = () => {
     if (window.innerWidth < 1024) {
       setDropdown(false);
@@ -45,7 +49,7 @@ function NavBar() {
           <a href="/finance">Financing</a>
           <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
             About Us
-            <HiOutlineChevronDown className="downA" />
+            <HiOutlineChevronDown onClick={toggleDropdown} className="downA" />
             {dropdown && <DropDown />}
           </div>
 
