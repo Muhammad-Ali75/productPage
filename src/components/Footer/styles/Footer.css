@@ -1,19 +1,16 @@
 /* Footer container */
 
 .footer {
-    /* display: flex;
+    display: flex;
     justify-content: center;
+    background-color: #f2f2f2;
     padding: 4rem 6rem 0 6rem;
-    margin: 10rem 0 0 0; */
-    border: 1px solid red;
-    width: 100%;
+    margin: 10rem 0 0 0;
+    width: 100%
 }
 
 .footer-content {
     display: flex;
-        border: 1px solid black;
-    width: 100%;
-    background-color: #f2f2f2;
     flex-direction: row;
     flex-wrap: wrap;
     flex-basis: auto;
@@ -24,7 +21,6 @@
     display: flex;
     flex-direction: column;
     max-width: 450px;
-    width: 50%;
     padding: 0 20px;
 }
 
