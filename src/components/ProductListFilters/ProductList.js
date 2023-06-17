@@ -1,3 +1,4 @@
+import "./styles/ProductList.css"
 import ProductGridCard from "./ProductGridCard";
 import ProductListCard from "./ProductListCard";
 
@@ -7,15 +8,7 @@ function ProductList({ view }) {
     22, 23, 24,
   ];
   return (
-    <div
-      style={{
-        width: "100%",
-        display: "flex",
-        flex: 1,
-        flexDirection: view === "grid" ? "row" : "column",
-        flexWrap: view === "grid" ? "wrap" : "nowrap",
-        marginTop: 20,
-      }}
+    <div className={view === "grid" ? "product-grid-container" : "product-list-container"}
     >
       {data.map((item, index) =>
         view === "grid" ? (
