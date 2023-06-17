@@ -2,7 +2,7 @@ import "./styles/ProductListCard.css";
 import usFlag from "../../assets/usaflag.svg";
 
 function ProductListCard({
-  title = "title",
+  title,
   isUsa = true,
   moq = 1000,
   lowPrice = 1,
@@ -16,7 +16,7 @@ function ProductListCard({
         style={{ height: "auto", width: "auto", maxHeight: "9rem" }}
       />
       <div style={{ width: "100%", display: "flex", flexDirection: "column" }}>
-        <p style={{ paddingBottom: 5 }}>{title || "TITLE"}</p>
+        <p style={{ paddingBottom: 5 }}>{title || "TITLE lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 lorem50 "}</p>
         {isUsa && (
           <div
             style={{ flexDirection: "row", display: "flex", paddingBottom: 5 }}
