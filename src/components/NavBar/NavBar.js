@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsBasket2 } from "react-icons/bs";
 import { HiOutlineChevronDown } from "react-icons/hi";
@@ -10,31 +10,42 @@ import Button from "./Button";
 
 function NavBar() {
   const navRef = useRef();
+  const [dropdown, setDropdown] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 1024);
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   function showNavBar() {
     navRef.current.classList.toggle("responsive-nav");
   }
-  const [dropdown, setDropdown] = useState(false);
 
   function toggleDropdown() {
-    setDropdown(!dropdown)
+    setDropdown(!dropdown);
   }
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 1024) {
-      setDropdown(false);
-    } else {
+    if (!isMobile) {
       setDropdown(true);
     }
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 1024) {
-      setDropdown(false);
-    } else {
+    if (!isMobile) {
       setDropdown(false);
     }
   };
+
 
   return (
     <header >
@@ -47,18 +58,26 @@ function NavBar() {
             Buy
           </a>
           <a href="/finance">Financing</a>
-          <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-            About Us
-            <HiOutlineChevronDown onClick={toggleDropdown} className="downA" />
+          <div className="about-us"
+            onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+            <div>
+              About Us
+              <HiOutlineChevronDown onClick={toggleDropdown} className="downA" />
+            </div>
             {dropdown && <DropDown />}
           </div>
 
           <button className="nav-btn nav-close-btn" onClick={showNavBar}>
             <FaTimes />
           </button>
+          <div className="login-buttons">
+            <Button />
+          </div>
         </nav>
-        <Button />
         <div className="cardContainer">
+          <div>
+            <Button />
+          </div>
           <button className="nav nav-btn cart-btn">
             <BsBasket2 />
           </button>

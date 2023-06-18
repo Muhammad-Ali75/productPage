@@ -1,6 +1,21 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  align-items: center;
+  width: 100%;
   padding: 0px 6rem;
+}
+
+@media only screen and (width <=1024px) {
+  .App{
+    padding: 0px 2rem;
+  }
+}
+
+
+
+@media only screen and (width <=768px) {
+  .App{
+    padding: 0px;
+  }
 }

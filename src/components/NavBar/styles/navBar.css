@@ -1,24 +1,25 @@
-@import url('https://fonts.cdnfonts.com/css/avenir-next-lt-pro');
-
-* {
-   padding: 0px;
-   margin: 0px;
-   box-sizing: border-box;
-   font-family: "avenir-next-lt-pro", sans-serif;
-}
-
-:root {
-   --blue: #00b2c9;
-   --green: #29b574;
-}
-
 header {
    display: flex;
    justify-content: center;
+   align-items: center;
    padding: 2rem 6rem;
+   overflow: hidden;
+   white-space: pre-wrap;
 }
 
-.navbar-content{
+@media only screen and (width <=1024px) {
+   header {
+      padding: 2rem;
+   }
+}
+
+@media only screen and (width <=768px) {
+   header {
+      padding: 2rem 0rem;
+   }
+}
+
+.navbar-content {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -30,7 +31,6 @@ header {
 .btn-container {
    display: flex;
    flex-direction: row;
-
 }
 
 header nav {
@@ -44,11 +44,22 @@ header .logo-image {
 }
 
 nav a {
-   margin: 0 1rem;
-   text-decoration: none;
-   color: black;
    display: flex;
    justify-content: center;
+   text-decoration: none;
+   margin: 0 1rem;
+   font-size: clamp(1.2vw, 1.2vw, 16px);
+   color: black;
+   white-space: nowrap;
+}
+
+.about-us {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: fit-content;
+   font-size: clamp(1.2vw, 1.2vw, 16px);
+   white-space: nowrap;
 }
 
 .downA {
@@ -88,6 +99,10 @@ header .cart-btn {
    align-items: center;
 }
 
+.login-buttons {
+   display: none;
+}
+
 @media only screen and (width <=1024px) {
    header .nav-btn {
       visibility: visible;
@@ -95,24 +110,36 @@ header .cart-btn {
    }
 
    header nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
       position: fixed;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
       background-color: white;
       gap: 1.5rem;
-      transform: translateX(150vh);
+      transform: translateX(200vh);
       padding-top: 80px;
    }
 
    header .responsive-nav {
       transform: none;
       transition: 0.5s;
+   }
 
+   nav a {
+      font-size: 18px;
+      margin: 0rem 3rem;
+   }
+
+   .about-us {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0rem 3rem;
+      font-size: 18px;
    }
 
    nav .nav-close-btn {
@@ -121,6 +148,17 @@ header .cart-btn {
       right: 2rem;
    }
 
+   .login-buttons {
+      display: flex;
+      width: 90%;
+      margin: 0 2rem;
+      padding: 2rem 0;
+      border-top: 1px solid #e2e2e2;
+   }
+
+   .cardContainer div {
+      display: none;
+   }
 }
 
 @media only screen and (min-width: 1025px) {
