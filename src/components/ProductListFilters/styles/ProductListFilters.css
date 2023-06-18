@@ -1,8 +1,14 @@
-.product-list-filter-container{
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    width: auto;
-    margin: 5rem 0rem;
-    max-width: 1550px;
+.product-list-filter-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  width: 100%;
+  margin: 5rem 0rem;
+  max-width: 1550px;
+}
+
+@media only screen and (width<=1024px) {
+  .product-list-filter-container {
+    flex-direction: column;
   }
+}

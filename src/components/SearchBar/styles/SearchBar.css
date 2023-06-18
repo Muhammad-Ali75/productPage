@@ -19,6 +19,12 @@
     border-radius: 0.5rem;
 }
 
+@media only screen and (width<=1024px) {
+    .containerSearch {
+        flex-direction: column-reverse;
+    }
+}
+
 .category-dropdown {
     display: flex;
     flex-direction: row;

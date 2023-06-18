@@ -1,6 +1,7 @@
 .productSection {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .bannerContainer {
@@ -13,7 +14,6 @@
 /* .bannerContainer p {
     color: #
 } */
-
 .imageContainer {
     background-image: url('../../../assets/widget.png');
     background-size: cover;
@@ -38,4 +38,14 @@
 .loadingContainer {
     text-align: center;
     margin-top: 8rem;
+}
+
+.pagination-container {
+    align-self: flex-end;
+}
+
+@media screen and (width <=1024px) {
+    .pagination-container {
+        align-self: center;
+    }
 }

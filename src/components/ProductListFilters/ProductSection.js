@@ -23,7 +23,7 @@ function ProductSection() {
       {false && <div className="loadingContainer">Loading...</div>}
       <SortSection view={view} set={handleSet} />
       <ProductList view={view} />
-      <div style={{ alignSelf: "flex-end" }}>
+      <div className="pagination-container">
         <Pagination />
       </div>
     </div>
