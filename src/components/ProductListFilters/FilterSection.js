@@ -1,62 +1,55 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context as ProductContext } from "../../context/ProductContext";
+import { Context as PleContext } from "../../context/ProductListEnhancement";
+
 import "./styles/FilterSection.css";
 import CheckboxGroup from "./CheckBoxFilters";
 import usFlag from "../../assets/usaflag.svg";
 
 function FiltersSection() {
-  const filtersList = {
-    productCertification: [
-      "ASTM",
-      "CE",
-      "Certificate of Compliance",
-      "Certificate of Conformity",
-      "EN",
-      "EPA",
-      "FCC",
-      "FDA",
-      "GB",
-      "Green Clean Certificate",
-      "Interek",
-      "ISO 11439:2000",
-      "ISO 11439:2013",
-      "ROHS",
-      "SGS",
-    ],
-    supplierCertification: [
-      "DUNS",
-      "DRS",
-      "GMP",
-      "ISO 13485",
-      "ISO 9001",
-      "ISO 9001:2015",
-    ],
-    manufacturerLocation: [
-      "Australia",
-      "Canada",
-      "China",
-      "Hong Kong S.A.R",
-      "India",
-      "Korea, Republic of",
-      "United Kingdom",
-      "United States",
-      "Vietnam",
-    ],
-  };
+  const {
+    state: { filters },
+  } = useContext(ProductContext);
+  const {
+    state: {
+      min_price,
+      max_price,
+      moq,
+      product_certificate,
+      supplier_certificate,
+      country,
+      stock_in_usa,
+    },
+    minPriceChange,
+    maxPriceChange,
+    moqChange,
+    productCertificateChange,
+    supplierCertificateChange,
+    countryChange,
+    stockInUsaChange,
+  } = useContext(PleContext);
 
-  const [productCertifications, setProductCertifications] = useState([]);
-  const [supplierCertifications, setSupplierCertifications] = useState([]);
-  const [manufacturerLocations, setManufacturerLocations] = useState([]);
+  function handleMinPrice({ target: { value } }) {
+    minPriceChange(value);
+  }
+  function handleMaxPrice({ target: { value } }) {
+    maxPriceChange(value);
+  }
+
+  function handlemoq({ target: { value } }) {
+    moqChange(value);
+  }
 
   const handleProductCertificationsChange = (values) => {
-    setProductCertifications(values);
+    productCertificateChange(values);
   };
 
   const handleSupplierCertificationsChange = (values) => {
-    setSupplierCertifications(values);
+    supplierCertificateChange(values);
   };
 
   const handleManufacturerLocationsChange = (values) => {
-    setManufacturerLocations(values);
+    countryChange(values);
   };
 
   return (
@@ -67,14 +60,24 @@ function FiltersSection() {
 
         <div className="priceRangeContainer">
           <div className="inputContainer priceRange">
-            <input type="number" placeholder="from" />
+            <input
+              value={min_price}
+              type="number"
+              placeholder="from"
+              onChange={handleMinPrice}
+            />
             <p>$</p>
           </div>
 
           <div className="dashed" />
 
           <div className="inputContainer priceRange">
-            <input type="number" placeholder="to" />
+            <input
+              value={max_price}
+              onChange={handleMaxPrice}
+              type="number"
+              placeholder="to"
+            />
             <p>$</p>
           </div>
         </div>
@@ -87,6 +90,7 @@ function FiltersSection() {
           type="number"
           placeholder="Less than"
           className="inputContainer moqInput"
+          onChange={handlemoq}
         />
       </div>
 
@@ -94,8 +98,8 @@ function FiltersSection() {
       <CheckboxGroup
         title={"Product Certification"}
         placeholder={"Product Certification"}
-        options={filtersList.productCertification}
-        selectedValues={productCertifications}
+        options={filters.productCertification}
+        selectedValues={product_certificate}
         onChange={handleProductCertificationsChange}
       />
 
@@ -103,8 +107,8 @@ function FiltersSection() {
       <CheckboxGroup
         title={"Supplier Certification"}
         placeholder={"Supplier Certification"}
-        options={filtersList.supplierCertification}
-        selectedValues={supplierCertifications}
+        options={filters.supplierCertification}
+        selectedValues={supplier_certificate}
         onChange={handleSupplierCertificationsChange}
       />
 
@@ -112,15 +116,15 @@ function FiltersSection() {
       <CheckboxGroup
         title={"Manufacturer Location"}
         placeholder={"Manufacturer Location"}
-        options={filtersList.manufacturerLocation}
-        selectedValues={manufacturerLocations}
+        options={filters.manufacturerLocation}
+        selectedValues={country}
         onChange={handleManufacturerLocationsChange}
       />
       {/* Stock Availability */}
       <div className="stockAvailContainer">
         <h3>Stock Availability</h3>
         <label>
-          <input type="checkbox" />
+          <input type="checkbox" onChange={stockInUsaChange} />
           <img src={usFlag} alt="us-logo" />
           In USA
         </label>

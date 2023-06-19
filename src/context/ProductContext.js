@@ -5,6 +5,7 @@ const productReducer = (state, action) => {
   switch (action.type) {
     case "add_post":
       return { ...state, posts: [action.payload, ...state.posts] };
+
     case "add_product":
       return { ...state, products: [action.payload, ...state.products] };
 
