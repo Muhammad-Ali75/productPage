@@ -10,8 +10,8 @@ function Footer() {
   return (
     <footer className="footer">
       <div style={{ maxWidth: "1550px" }}>
-        <div class="footer-content">
-          <div class="footer-container">
+        <div className="footer-content">
+          <div className="footer-container">
             <img src={logo} alt="logo" className="logo-img" />
             <p>
               Connecting buyers and manufacturers using the world’s best
@@ -21,7 +21,9 @@ function Footer() {
 
             <label>
               Email
-              <a style={{ color: "red" }} href="/team">*</a>
+              <a style={{ color: "red" }} href="/team">
+                *
+              </a>
             </label>
             <input />
             <button type="submit">Submit</button>
@@ -36,7 +38,7 @@ function Footer() {
             </div>
           </div>
 
-          <div class="footer-links">
+          <div className="footer-links">
             <h3>About Us</h3>
             <ul>
               <li>Our Story</li>
@@ -49,7 +51,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div class="footer-links">
+          <div className="footer-links">
             <h3>Our Services </h3>
             <ul>
               <li>Expert Sourcing</li>
@@ -59,7 +61,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div class="footer-links">
+          <div className="footer-links">
             <h3>Account</h3>
             <ul>
               <li>Sign In</li>
@@ -71,7 +73,7 @@ function Footer() {
             </ul>
           </div>
 
-          <div class="footer-locations">
+          <div className="footer-locations">
             <h3>Our Locations</h3>
             <p>BuyHive Limited</p>
             <p>
@@ -95,7 +97,7 @@ function Footer() {
           </div>
         </div>
 
-        <div class="footer-bottom">
+        <div className="footer-bottom">
           <p>&copy; 2023 BuyHive Limited All Rights Reserved</p>
           <div className="termContainer">
             <p>Terms of Use</p>

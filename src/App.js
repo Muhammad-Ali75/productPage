@@ -1,5 +1,6 @@
 import { useEffect, useContext } from "react";
 import { Context as PleContext } from "./context/ProductListEnhancement";
+import { Context as ProductContext } from "./context/ProductContext";
 
 import "./styles/App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -8,18 +9,26 @@ import ProductListFilters from "./components/ProductListFilters/ProductListFilte
 import Footer from "./components/Footer/Footer";
 
 function App() {
-  const { state } = useContext(PleContext);
+  const {
+    state: { page },
+  } = useContext(PleContext);
+  const {
+    state: { products, totalPages, all_products },
+    getData,
+  } = useContext(ProductContext);
+
+  console.log("Product STATE:::", products, totalPages, all_products);
 
   useEffect(() => {
-    console.log("App STATE:::", JSON.stringify(state, null, 2));
-  }, [state]);
+    getData({ page });
+  }, [page]);
 
   return (
     <>
       <NavBar />
       <div className="App">
         <SearchBar />
-        <ProductListFilters />
+        {products.length !== 0 && <ProductListFilters />}
       </div>
       <Footer />
     </>

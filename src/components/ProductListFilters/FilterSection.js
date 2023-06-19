@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Context as ProductContext } from "../../context/ProductContext";
 import { Context as PleContext } from "../../context/ProductListEnhancement";
 
@@ -87,6 +87,7 @@ function FiltersSection() {
       <div className="moqContainer">
         <h3>MOQ</h3>
         <input
+          value={moq}
           type="number"
           placeholder="Less than"
           className="inputContainer moqInput"
@@ -124,7 +125,11 @@ function FiltersSection() {
       <div className="stockAvailContainer">
         <h3>Stock Availability</h3>
         <label>
-          <input type="checkbox" onChange={stockInUsaChange} />
+          <input
+            value={stock_in_usa}
+            type="checkbox"
+            onChange={stockInUsaChange}
+          />
           <img src={usFlag} alt="us-logo" />
           In USA
         </label>

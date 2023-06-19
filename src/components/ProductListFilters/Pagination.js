@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Context as PleContext } from "../../context/ProductListEnhancement";
+import { Context as ProductContext } from "../../context/ProductContext";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 function Pagination() {
@@ -7,6 +8,10 @@ function Pagination() {
     state: { page },
     pageChange,
   } = useContext(PleContext);
+
+  const {
+    state: { totalPages },
+  } = useContext(ProductContext);
 
   const totalPage = 5;
 
@@ -24,7 +29,7 @@ function Pagination() {
       </button>
 
       <div className="currentPage">{page}</div>
-      <p style={{ display: "flex" }}>of {totalPage}</p>
+      <p style={{ display: "flex" }}>of {totalPages}</p>
 
       <button onClick={() => handlePageChange("+")}>
         <FiChevronRight />
