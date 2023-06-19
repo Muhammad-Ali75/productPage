@@ -7,6 +7,10 @@
     max-width: 1550px;
 }
 
+.mobile-category {
+    display: none;
+}
+
 .containerSearch {
     display: flex;
     flex-direction: row;
@@ -22,6 +26,42 @@
 @media only screen and (width<=1024px) {
     .containerSearch {
         flex-direction: column-reverse;
+    }
+
+    .searchBar {
+        flex-direction: column-reverse;
+    }
+
+    .mobile-category {
+        display: flex;
+        margin-top: 2rem;
+        background-color: #f2f2f2;
+        width: 100%;
+        border-radius: 99px;
+        height: 50px;
+    }
+
+    .open {
+        border: 3px solid #f2f2f2;
+        background-color: white;
+    }
+
+    .mobile-category button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 99px;
+    }
+
+    .open-button {
+        background-color: white;
+    }
+
+    .category-dropdown {
+        top: 360px !important;
     }
 }
 

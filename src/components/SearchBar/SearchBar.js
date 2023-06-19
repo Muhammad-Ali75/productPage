@@ -1,7 +1,8 @@
+import "./styles/SearchBar.css";
 import { useState } from "react";
 import CatergoryDropdown from "./CategoryDropdown";
 import SeachInput from "./SearchInput";
-import "./styles/SearchBar.css";
+import { BiCategory } from "react-icons/bi";
 
 function SearchBar() {
   const [open, setOpen] = useState(false);
@@ -12,6 +13,12 @@ function SearchBar() {
 
   return (
     <div className="searchBar">
+      <div className={open ? "mobile-category open" : "mobile-category"}>
+        <button className={open ? "open-button" : ""} onClick={handleSetOpen}>
+          <BiCategory style={{ color: "var(--blue)", fontSize: 35 }} />
+          Categories
+        </button>
+      </div>
       <div className="containerSearch">
         <CatergoryDropdown open={open} set={handleSetOpen} />
         <SeachInput />
@@ -36,8 +43,8 @@ function SearchBar() {
               <li onClick={handleSetOpen}>PPE Kit</li>
               <li onClick={handleSetOpen}>Shoe Cover</li>
               <li onClick={handleSetOpen}>Surgical Scrubs</li>
-            </ul >
-          </div >
+            </ul>
+          </div>
 
           {/* Health & Medical */}
 
@@ -51,60 +58,62 @@ function SearchBar() {
               <li onClick={handleSetOpen}>Covid Test Kits</li>
               <li onClick={handleSetOpen}>Disinfection Tunnels</li>
               <li onClick={handleSetOpen}>Hand Sanitizer</li>
-              <li onClick={handleSetOpen}>Medical Equipment & Hospital Supplies</li >
+              <li onClick={handleSetOpen}>
+                Medical Equipment & Hospital Supplies
+              </li>
               <li onClick={handleSetOpen}>Oximeter</li>
               <li onClick={handleSetOpen}>Oxygen Regulators</li>
-              <li onClick={handleSetOpen}>Sanitizer Sprays & Bottles</li >
+              <li onClick={handleSetOpen}>Sanitizer Sprays & Bottles</li>
               <li onClick={handleSetOpen}>Sanitizing Grips</li>
               <li onClick={handleSetOpen}>Sterilizer</li>
               <li onClick={handleSetOpen}>Syringe</li>
               <li onClick={handleSetOpen}>Thermometer</li>
               <li onClick={handleSetOpen}>Wipes</li>
             </ul>
-          </div >
+          </div>
 
           {/* Garden & Outdoor */}
 
-          <div >
+          <div>
             <h4 onClick={handleSetOpen}>Garden & Outdoor</h4>
             <ul>
               <li onClick={handleSetOpen}>Deck Boxes</li>
               <li onClick={handleSetOpen}>Outdoor Decor</li>
               <li onClick={handleSetOpen}>Patio Furniture & Accessories</li>
-            </ul >
-          </div >
+            </ul>
+          </div>
 
           {/* Sports & Fitness */}
 
-          <div >
+          <div>
             <h4 onClick={handleSetOpen}>Sports & Fitness</h4>
             <ul>
               <li onClick={handleSetOpen}>Pilates</li>
               <li onClick={handleSetOpen}>Strength Training Equipment</li>
             </ul>
-          </div >
+          </div>
 
           {/* Other */}
 
-          <div  >
+          <div>
             <h4 onClick={handleSetOpen}>Other</h4>
             <ul>
               <li onClick={handleSetOpen}>Miscellaneous</li>
-            </ul >
-          </div >
+            </ul>
+          </div>
 
           {/* Baby */}
 
-          <div >
+          <div>
             <h4 onClick={handleSetOpen}>Baby</h4>
             <ul>
               <li onClick={handleSetOpen}>Feeding Products</li>
-            </ul >
-          </div >
+            </ul>
+          </div>
 
           {/* Beauty & Personal Care */}
 
-          <div >
+          <div>
             <h4 onClick={handleSetOpen}>Beauty & Personal Care</h4>
             <ul>
               <li onClick={handleSetOpen}>Electric Copper Combs</li>
@@ -112,20 +121,19 @@ function SearchBar() {
               <li onClick={handleSetOpen}>Feminine Care</li>
               <li onClick={handleSetOpen}> Skin Care</li>
             </ul>
-          </div >
+          </div>
 
           {/* Home, Kitchen & Office */}
 
-          <div >
+          <div>
             <h4 onClick={handleSetOpen}>Home, Kitchen & Office</h4>
             <ul>
               <li onClick={handleSetOpen}>Home & Office Decor</li>
-            </ul >
-          </div >
-        </div >
-      )
-      }
-    </div >
+            </ul>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 

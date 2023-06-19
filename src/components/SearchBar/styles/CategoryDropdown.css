@@ -9,6 +9,13 @@
 
 }
 
+@media screen and (width<=1024px) {
+
+    .categoryContainer {
+        display: none;
+    }
+}
+
 .categoryContainer p {
     font-size: 16px;
     color: black;
