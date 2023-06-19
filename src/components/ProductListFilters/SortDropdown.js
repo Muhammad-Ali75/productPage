@@ -1,17 +1,22 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Context as PleContext } from "../../context/ProductListEnhancement";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import "./styles/SortDropdown.css";
 
 function SortDropdown() {
+  const {
+    state: { sort_by },
+    sortByChange,
+  } = useContext(PleContext);
+
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("Relevence");
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
 
   const handleOptionSelect = (option) => {
-    setSelectedOption(option);
+    sortByChange(option);
     setIsOpen(false);
   };
 
@@ -19,11 +24,15 @@ function SortDropdown() {
     <div
       className="sortDropdown"
       onMouseEnter={toggleDropdown}
-      onMouseLeave={toggleDropdown}
+      onMouseLeave={() => {
+        if (isOpen) {
+          toggleDropdown();
+        }
+      }}
     >
       <div className="sortdownArrowBtn">
         <button className="sortDropdown-toggle" onClick={toggleDropdown}>
-          {selectedOption}
+          {sort_by}
           <HiOutlineChevronDown className="downArrow" />
         </button>
       </div>

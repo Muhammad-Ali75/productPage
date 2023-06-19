@@ -45,7 +45,7 @@ const pageChange = (dispatch) => (pageNumber) => {
   dispatch({ type: "change_page", payload: pageNumber });
 };
 
-const soryByChange = (dispatch) => (sortBy) => {
+const sortByChange = (dispatch) => (sortBy) => {
   dispatch({ type: "sort_by", payload: sortBy });
 };
 
@@ -86,7 +86,7 @@ export const { Provider, Context } = createDataContext(
   pleReducer,
   {
     pageChange,
-    soryByChange,
+    sortByChange,
     keywordChange,
     minPriceChange,
     maxPriceChange,

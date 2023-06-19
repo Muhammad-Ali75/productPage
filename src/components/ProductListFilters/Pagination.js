@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { Context as PleContext } from "../../context/ProductListEnhancement";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 function Pagination() {
-  const [{ currentPage, totalPage }, setPage] = useState({
-    currentPage: 1,
-    totalPage: 5,
-  });
+  const {
+    state: { page },
+    pageChange,
+  } = useContext(PleContext);
+
+  const totalPage = 5;
 
   const handlePageChange = (sign) => {
-    if (sign === "+" && currentPage < totalPage) {
-      setPage((prev) => ({ ...prev, currentPage: prev.currentPage + 1 }));
-    } else if (sign === "-" && currentPage > 1) {
-      setPage((prev) => ({ ...prev, currentPage: prev.currentPage - 1 }));
+    if (sign === "+" && page < totalPage) {
+      pageChange(page + 1);
+    } else if (sign === "-" && page > 1) {
+      pageChange(page - 1);
     }
   };
   return (
@@ -20,7 +23,7 @@ function Pagination() {
         <FiChevronLeft />
       </button>
 
-      <div className="currentPage">{currentPage}</div>
+      <div className="currentPage">{page}</div>
       <p style={{ display: "flex" }}>of {totalPage}</p>
 
       <button onClick={() => handlePageChange("+")}>
