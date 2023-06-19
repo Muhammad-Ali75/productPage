@@ -21,7 +21,7 @@ function Pagination() {
       </button>
 
       <div className="currentPage">{currentPage}</div>
-      <p>of {totalPage}</p>
+      <p style={{ display: "flex" }}>of {totalPage}</p>
 
       <button onClick={() => handlePageChange("+")}>
         <FiChevronRight />
