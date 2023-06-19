@@ -1,10 +1,15 @@
-.product-grid-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    margin-top: 20;
-  }
+.product-grid-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 20;
+}
 
-  .product-list-container{
-    
+.product-list-container {}
+
+@media screen and (width<=1024px) {
+  .product-grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
+}

@@ -4,12 +4,6 @@
     width: 75%;
 }
 
-@media screen and (width<=1024px) {
-    .productSection {
-        width: 100%;
-    }
-}
-
 .bannerContainer {
     display: flex;
     flex-direction: row;
@@ -51,6 +45,18 @@
 }
 
 @media screen and (width <=1024px) {
+    .productSection {
+        width: 100%;
+    }
+
+    .bannerContainer {
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        width: 100%;
+    }
+
     .pagination-container {
         align-self: center;
     }

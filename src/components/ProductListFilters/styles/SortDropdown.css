@@ -1,9 +1,7 @@
 .sortDropdown {
     width: 13rem;
     background-color: white;
-
 }
-
 
 .sortDropdown-toggle {
     display: flex;
@@ -16,7 +14,6 @@
     font-size: medium;
     border: 0px;
     font-size: 1rem;
-
 }
 
 .sortdownArrowBtn {
@@ -33,7 +30,7 @@
     position: absolute;
     margin-top: 0.3rem;
     padding-left: 0.5rem;
-    top: 405px;
+    top: 475px;
     background-color: white;
     list-style: none;
     border: 1px solid #e2e8f0;
@@ -48,4 +45,10 @@
 
 .sortDropdownList li:hover {
     color: var(--green)
+}
+
+@media screen and (width <=1024px) {
+    .sortDropdownList {
+        top: 650px
+    }
 }

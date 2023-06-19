@@ -1,22 +1,19 @@
 .gridCardContainer {
+  flex: 1;
   height: fit-content;
   padding: 0.5rem;
-  max-height: 23rem;
-  max-width: 20rem;
-
+  max-width: 23rem;
+  overflow: hidden;
 }
 
 .gridCardContainer:hover {
   background: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 4px;
-
 }
 
 .imageStyle {
-  height: auto;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .infoContainer {

@@ -25,6 +25,10 @@
   width: 30rem;
 }
 
+.sortPagination p {
+  display: none;
+}
+
 .paginationContainer {
   display: flex;
   justify-content: space-between;
@@ -64,6 +68,10 @@
   .sortPagination {
     align-items: center;
     width: 20rem;
+  }
+
+  .sortPagination p {
+    display: flex;
   }
 
   .pagi {
