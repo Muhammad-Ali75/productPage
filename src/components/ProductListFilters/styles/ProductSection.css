@@ -1,7 +1,13 @@
 .productSection {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 75%;
+}
+
+@media screen and (width<=1024px) {
+    .productSection {
+        width: 100%;
+    }
 }
 
 .bannerContainer {

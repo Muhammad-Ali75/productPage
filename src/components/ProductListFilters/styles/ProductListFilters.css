@@ -1,6 +1,7 @@
 .product-list-filter-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-self: center;
   width: 100%;
   margin: 5rem 0rem;
@@ -35,5 +36,4 @@
     font-size: 1rem;
     margin-bottom: 2rem;
   }
-
 }
