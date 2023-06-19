@@ -7,8 +7,33 @@
   max-width: 1550px;
 }
 
+.mobile-filters {
+  display: none;
+}
+
 @media only screen and (width<=1024px) {
   .product-list-filter-container {
     flex-direction: column;
   }
+
+  .desktop-filters {
+    display: none;
+  }
+
+  .mobile-filters {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+  }
+
+  .mobile-filters button {
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #f2f2f2;
+    border-radius: 999px;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
 }

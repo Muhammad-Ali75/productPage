@@ -1,11 +1,23 @@
 .filterContainer {
-    margin-right: 2rem;
+    margin-right: 10rem;
     padding: 1.25rem;
     width: 100%;
     max-width: 320px;
     height: fit-content;
     border: 1px solid #e2e8f0;
     border-radius: 0.25rem;
+    background-color: white;
+}
+
+@media only screen and (width <=1024px) {
+    .filterContainer {
+        margin-right: 0px;
+        max-width: 90%;
+        position: absolute;
+        top: 460px;
+        background-color: white;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, .1), 0 10px 10px -5px rgba(0, 0, 0, .04);
+    }
 }
 
 /* Price  */
@@ -14,6 +26,7 @@
     flex-direction: column;
     margin-top: 2rem;
     width: 100%;
+    max-width: 350px;
 }
 
 .priceContainer h3 {
@@ -54,6 +67,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: 2rem;
+    width: 100%;
 }
 
 .moqContainer h3 {
@@ -63,7 +77,7 @@
 
 .moqInput {
     height: 2.5rem;
-    width: 17.3rem;
+    width: 100%;
     margin-top: 1rem;
     outline: none;
 }
