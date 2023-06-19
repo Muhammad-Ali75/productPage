@@ -19,8 +19,11 @@ function SortSection({ view, set }) {
         />
       </div>
       <div className="sortPagination">
+        <p>Sort By:</p>
         <SortDropdown />
-        <Pagination />
+        <div className="pagi">
+          <Pagination />
+        </div>
       </div>
     </div>
   );
