@@ -48,7 +48,7 @@ nav a {
    justify-content: center;
    text-decoration: none;
    margin: 0 1rem;
-   font-size: clamp(1.2vw, 1.2vw, 16px);
+   font-size: min(1.2vw, 16px);
    color: black;
    white-space: nowrap;
 }
@@ -58,7 +58,7 @@ nav a {
    flex-direction: row;
    align-items: center;
    width: fit-content;
-   font-size: clamp(1.2vw, 1.2vw, 16px);
+   font-size: min(1.2vw, 16px);
    white-space: nowrap;
 }
 
