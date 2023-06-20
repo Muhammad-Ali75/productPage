@@ -8,7 +8,7 @@ function SeachInput() {
   const { keywordChange } = useContext(PleContext);
 
   function handleKeywordChange(event) {
-    console.log(inputRef.current.value);
+    // console.log(inputRef.current.value);
     keywordChange(inputRef.current.value);
   }
   return (

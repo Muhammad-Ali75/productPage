@@ -9,19 +9,18 @@ import ProductListFilters from "./components/ProductListFilters/ProductListFilte
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const { state } = useContext(PleContext);
   const {
-    state: { page },
-  } = useContext(PleContext);
-  const {
-    state: { products, totalPages, all_products },
+    state: { products },
     getData,
   } = useContext(ProductContext);
 
-  console.log("Product STATE:::", products, totalPages, all_products);
+  // console.log("Product STATE:::", products, totalPages, all_products);
 
   useEffect(() => {
-    getData({ page });
-  }, [page]);
+    getData({ ...state });
+    // eslint-disable-next-line
+  }, [state]);
 
   return (
     <>
