@@ -126,7 +126,7 @@ function FiltersSection() {
         <h3>Stock Availability</h3>
         <label>
           <input
-            value={stock_in_usa}
+            checked={stock_in_usa}
             type="checkbox"
             onChange={stockInUsaChange}
           />

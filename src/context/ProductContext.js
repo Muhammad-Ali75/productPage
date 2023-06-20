@@ -1,4 +1,4 @@
-import { generateQuery } from "../utils/functions";
+import { generateQuery, generateSort } from "../utils/functions";
 import createDataContext from "./createDataContext";
 import axios from "axios";
 
@@ -39,6 +39,7 @@ const getData =
         {
           params: {
             page,
+            sort: generateSort(sort_by),
             query: generateQuery({
               min_price,
               max_price,
@@ -107,7 +108,7 @@ export const { Provider, Context } = createDataContext(
         "India",
         "Korea, Republic of",
         "United Kingdom",
-        "United States",
+        "USA",
         "Vietnam",
       ],
     },

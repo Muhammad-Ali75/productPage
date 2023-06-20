@@ -15,7 +15,7 @@ function ProductList({ view }) {
         view === "grid" ? "product-grid-container" : "product-list-container"
       }
     >
-      {products.map((item, index) =>
+      {products.map((item) =>
         view === "grid" ? (
           <ProductGridCard key={item._id} {...item} />
         ) : (

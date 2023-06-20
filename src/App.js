@@ -28,6 +28,20 @@ function App() {
       <div className="App">
         <SearchBar />
         {products.length !== 0 && <ProductListFilters />}
+        {products.length === 0 && (
+          <div
+            style={{
+              color: "red",
+              fontSize: 16,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: 100,
+            }}
+          >
+            No Products to Show
+          </div>
+        )}
       </div>
       <Footer />
     </>
