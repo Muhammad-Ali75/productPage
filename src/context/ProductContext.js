@@ -28,9 +28,9 @@ const getData = (dispatch) => async (params) => {
     );
     if (status === 200) {
       const product_data = {
-        products: data.products,
-        totalPages: Math.floor(data.all_products / data.limit),
-        all_products: data.all_products,
+        products: data.docs,
+        totalPages: data.totalPages,
+        all_products: data.totalDocs,
       };
       dispatch({ type: "get_data", payload: product_data });
     }

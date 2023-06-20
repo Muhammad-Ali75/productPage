@@ -17,9 +17,9 @@ function ProductList({ view }) {
     >
       {products.map((item, index) =>
         view === "grid" ? (
-          <ProductGridCard {...item} key={index} />
+          <ProductGridCard key={item._id} {...item} />
         ) : (
-          <ProductListCard {...item} />
+          <ProductListCard key={item._id} {...item} />
         )
       )}
     </div>

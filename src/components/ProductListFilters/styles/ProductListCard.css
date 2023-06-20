@@ -14,28 +14,45 @@
     background: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 4px;
-
 }
 
-.product-image{ 
+.list-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20%;
+    margin-right: 20px;
+}
+
+.product-image {
     height: auto;
-     width: "auto";
-      max-height: 9rem
-    }
-.info-container{ 
+    width: "auto";
+    max-height: 9rem;
+    object-fit: cover;
+}
+
+.info-container {
     display: flex;
     flex-direction: column;
     width: 70%;
     overflow: hidden;
     white-space: nowrap;
-     }
-.title-text{ 
+}
+
+.us-flag-container {
+    flex-direction: row;
+    display: flex;
+    padding-bottom: 5px;
+    min-height: 2.5rem
+}
+
+.title-text {
     padding-bottom: 5;
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    
- }
+}
 
 .addCartBtn {
     width: 9rem;

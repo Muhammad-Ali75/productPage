@@ -2,42 +2,33 @@ import usFlag from "../../assets/usaflag.svg";
 import "./styles/ProductGridCard.css";
 
 function ProductGridCard({
-  key,
+  _id,
   title,
-  isUsa = false,
+  image,
+  stock_in_usa,
   moq,
-  lowerPriceRange,
-  upperPriceRange,
+  min_price,
+  max_price,
 }) {
   return (
-    <div className="gridCardContainer" key={key}>
-      <img
-        src="https://tbh-production.s3.ap-southeast-1.amazonaws.com/Product/2034888965/Images/16066601421950233806.png"
-        alt="productImg"
-        className="imageStyle"
-      />
+    <div className="gridCardContainer" key={_id}>
+      <div className="product-image-container">
+        <img src={image} alt="productImg" className="imageStyle" />
+      </div>
       <div className="infoContainer">
         <div className="usflagContainer">
-          {isUsa && (
+          {stock_in_usa && (
             <>
-              {" "}
               <img src={usFlag} alt="us-flag" className="usFlagStyle" />
               <p className="usFlagText">Stock in USA</p>
             </>
           )}
         </div>
 
-        <p className="titleStyle">
-          {title ||
-            "TITLE lorem ips lorem ipsum dolor sit amet, consectetur adip lorem sit"}
-        </p>
+        <p className="titleStyle">{title}</p>
         <p className="moqText">MOQ: {moq} Peices</p>
         <h3 className="priceText">
-          ${" "}
-          {upperPriceRange
-            ? `${lowerPriceRange} - $ ${upperPriceRange}`
-            : lowerPriceRange}{" "}
-          / Peices
+          $ {max_price ? `${min_price} - $ ${max_price}` : min_price} / Peices
         </h3>
 
         <button>Add to cart</button>
