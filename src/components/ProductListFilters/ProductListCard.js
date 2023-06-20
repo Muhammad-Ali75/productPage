@@ -9,6 +9,7 @@ function ProductListCard({
   moq,
   min_price,
   max_price,
+  unit,
 }) {
   return (
     <div className="listCardContainer" key={_id}>

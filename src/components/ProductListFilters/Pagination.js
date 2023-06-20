@@ -13,10 +13,8 @@ function Pagination() {
     state: { totalPages },
   } = useContext(ProductContext);
 
-  const totalPage = 5;
-
   const handlePageChange = (sign) => {
-    if (sign === "+" && page < totalPage) {
+    if (sign === "+" && page < totalPages) {
       pageChange(page + 1);
     } else if (sign === "-" && page > 1) {
       pageChange(page - 1);

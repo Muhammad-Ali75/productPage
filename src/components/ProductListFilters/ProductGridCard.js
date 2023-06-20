@@ -9,6 +9,7 @@ function ProductGridCard({
   moq,
   min_price,
   max_price,
+  unit,
 }) {
   return (
     <div className="gridCardContainer" key={_id}>
@@ -26,9 +27,9 @@ function ProductGridCard({
         </div>
 
         <p className="titleStyle">{title}</p>
-        <p className="moqText">MOQ: {moq} Peices</p>
+        <p className="moqText">{`MOQ: ${moq} ${unit}`}</p>
         <h3 className="priceText">
-          $ {max_price ? `${min_price} - $ ${max_price}` : min_price} / Peices
+          $ {max_price ? `${min_price} - $ ${max_price}` : min_price} / {unit}
         </h3>
 
         <button>Add to cart</button>
