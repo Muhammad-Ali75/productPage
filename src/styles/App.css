@@ -6,6 +6,21 @@
   padding: 0px 6rem;
 }
 
+.total-products {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1550px;
+  margin-top: 50px;
+  margin-bottom: -50px;
+  font-size: 20px;
+}
+
+.total-products p {
+  color: #838282
+}
+
 @media (width <=1024px) {
   .App {
     padding: 0px 2rem;

@@ -11,7 +11,7 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const { state } = useContext(PleContext);
   const {
-    state: { products, error },
+    state: { products, error, all_products },
     getData,
   } = useContext(ProductContext);
 
@@ -25,7 +25,15 @@ function App() {
       <NavBar />
       <div className="App">
         <SearchBar />
-        {products.length !== 0 && <ProductListFilters />}
+
+        {products.length !== 0 && (
+          <>
+            <div className="total-products">
+              Products &nbsp;<p>({all_products} Products)</p>
+            </div>
+            <ProductListFilters />
+          </>
+        )}
         {(products.length === 0 || error) && (
           <div
             style={{
