@@ -12,7 +12,18 @@ const pleReducer = (state, action) => {
       return { ...state, sort_by: action.payload };
 
     case "keyword":
-      return { ...state, keyword: action.payload };
+      return {
+        page: 1,
+        sort_by: "Relevance",
+        min_price: 0,
+        max_price: 6900,
+        moq: "",
+        product_certificate: [],
+        supplier_certificate: [],
+        country: [],
+        stock_in_usa: false,
+        keyword: action.payload,
+      };
 
     case "min_price":
       return { ...state, min_price: action.payload, page: 1 };

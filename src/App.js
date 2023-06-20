@@ -11,11 +11,9 @@ import Footer from "./components/Footer/Footer";
 function App() {
   const { state } = useContext(PleContext);
   const {
-    state: { products },
+    state: { products, error },
     getData,
   } = useContext(ProductContext);
-
-  // console.log("Product STATE:::", products, totalPages, all_products);
 
   useEffect(() => {
     getData({ ...state });
@@ -28,7 +26,7 @@ function App() {
       <div className="App">
         <SearchBar />
         {products.length !== 0 && <ProductListFilters />}
-        {products.length === 0 && (
+        {(products.length === 0 || error) && (
           <div
             style={{
               color: "red",

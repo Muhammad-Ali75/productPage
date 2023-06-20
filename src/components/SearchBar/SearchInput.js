@@ -8,13 +8,22 @@ function SeachInput() {
   const { keywordChange } = useContext(PleContext);
 
   function handleKeywordChange(event) {
-    // console.log(inputRef.current.value);
     keywordChange(inputRef.current.value);
   }
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      keywordChange(inputRef.current.value);
+    }
+  };
   return (
     <div className="searchInputContainer">
       <div className="inputContainer">
-        <input type="text" placeholder="Search" ref={inputRef} />
+        <input
+          type="text"
+          placeholder="Search"
+          ref={inputRef}
+          onKeyDown={handleKeyDown}
+        />
         <div className="categoryDropdown">
           <SearchCategory />
         </div>

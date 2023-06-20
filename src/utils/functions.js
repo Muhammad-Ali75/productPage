@@ -3,8 +3,6 @@ export function addCommasToNumber(number) {
 }
 
 export function generateQuery(filters) {
-  console.log("FIlters", filters);
-
   const query = {};
 
   // Add filter conditions to the query object based on the provided filters
@@ -35,10 +33,6 @@ export function generateQuery(filters) {
   if (filters.country && filters.country.length > 0) {
     query.country = filters.country;
   }
-
-  console.log("query", query);
-
-  // Add more filter conditions if needed
 
   return JSON.stringify(query);
 }

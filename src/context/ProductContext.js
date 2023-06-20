@@ -8,10 +8,13 @@ const productReducer = (state, action) => {
     case "get_data":
       return {
         ...state,
+        error: null,
         products: action.payload.products,
         totalPages: action.payload.totalPages,
         all_products: action.payload.all_products,
       };
+    case "error":
+      return { ...state, error: action.payload.error };
 
     default: {
       return state;
@@ -39,6 +42,7 @@ const getData =
         {
           params: {
             page,
+            keyword,
             sort: generateSort(sort_by),
             query: generateQuery({
               min_price,
@@ -61,9 +65,10 @@ const getData =
         dispatch({ type: "get_data", payload: product_data });
       }
 
-      // console.log("RESPONSE:::", JSON.stringify(data, null, 2));
+      console.log("RESPONSE:::", JSON.stringify(data, null, 2));
     } catch (e) {
       console.warn(e);
+      dispatch({ type: "error", payload: e.message });
     }
   };
 
@@ -72,6 +77,7 @@ export const { Provider, Context } = createDataContext(
   { getData },
   {
     products: [],
+    error: null,
     totalPages: 0,
     all_products: 0,
     filters: {
