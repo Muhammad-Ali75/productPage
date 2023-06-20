@@ -1,3 +1,4 @@
+import { generateQuery } from "../utils/functions";
 import createDataContext from "./createDataContext";
 import axios from "axios";
 
@@ -18,28 +19,52 @@ const productReducer = (state, action) => {
   }
 };
 
-const getData = (dispatch) => async (params) => {
-  try {
-    const { data, status } = await axios.get(
-      "http://localhost:5000/api/getAllProducts",
-      {
-        params,
+const getData =
+  (dispatch) =>
+  async ({
+    page,
+    sort_by,
+    keyword,
+    min_price,
+    max_price,
+    moq,
+    product_certificate,
+    supplier_certificate,
+    country,
+    stock_in_usa,
+  }) => {
+    try {
+      const { data, status } = await axios.get(
+        "http://localhost:5000/api/getAllProducts",
+        {
+          params: {
+            page,
+            query: generateQuery({
+              min_price,
+              max_price,
+              moq,
+              product_certificate,
+              supplier_certificate,
+              country,
+              stock_in_usa,
+            }),
+          },
+        }
+      );
+      if (status === 200) {
+        const product_data = {
+          products: data.docs,
+          totalPages: data.totalPages,
+          all_products: data.totalDocs,
+        };
+        dispatch({ type: "get_data", payload: product_data });
       }
-    );
-    if (status === 200) {
-      const product_data = {
-        products: data.docs,
-        totalPages: data.totalPages,
-        all_products: data.totalDocs,
-      };
-      dispatch({ type: "get_data", payload: product_data });
-    }
 
-    console.log("RESPONSE:::", JSON.stringify(data, null, 2));
-  } catch (e) {
-    console.warn(e);
-  }
-};
+      // console.log("RESPONSE:::", JSON.stringify(data, null, 2));
+    } catch (e) {
+      console.warn(e);
+    }
+  };
 
 export const { Provider, Context } = createDataContext(
   productReducer,
