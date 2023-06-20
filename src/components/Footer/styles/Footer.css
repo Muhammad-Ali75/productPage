@@ -1,5 +1,4 @@
 /* Footer container */
-
 .footer {
     display: flex;
     justify-content: center;
@@ -98,7 +97,6 @@
     margin: 0px 3px
 }
 
-
 /* Footer links */
 .footer-links {
     max-width: 450px;
@@ -131,7 +129,6 @@
     font-size: 20px;
     font-weight: 500;
 }
-
 
 .footer-locations p {
     font-size: 17px;
@@ -169,7 +166,6 @@
     background-repeat: no-repeat;
 }
 
-
 /* Footer bottom */
 .footer-bottom {
     display: flex;
@@ -179,7 +175,6 @@
     padding: 2rem 1rem;
     border-top: 1px solid black;
     opacity: 0.4;
-
 }
 
 .footer-bottom p {
@@ -195,7 +190,7 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+@media (width<=768px) {
 
     .footer-links,
     .footer-social {
@@ -208,7 +203,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (width <=480px) {
 
     .footer-links li,
     .footer-social li {

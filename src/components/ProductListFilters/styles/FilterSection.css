@@ -9,7 +9,7 @@
     background-color: white;
 }
 
-@media only screen and (width <=1024px) {
+@media (width <=1024px) {
     .filterContainer {
         margin-right: 0px;
         max-width: 90%;

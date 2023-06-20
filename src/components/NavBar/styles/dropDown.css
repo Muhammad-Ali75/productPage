@@ -10,7 +10,7 @@
   padding: 0.5rem 0;
 }
 
-@media only screen and (width <=1024px) {
+@media (width <=1024px) {
   .dropdown-menu {
     /* top: 280px; */
     border: 0px;
@@ -42,7 +42,7 @@
   padding: 16px;
 }
 
-@media screen and (max-width: 1024px) {
+@media (width <=1024px) {
   .fa-caret-down {
     display: none;
   }

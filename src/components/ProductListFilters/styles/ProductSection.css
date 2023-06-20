@@ -44,7 +44,7 @@
     align-self: flex-end;
 }
 
-@media screen and (width <=1024px) {
+@media (width <=1024px) {
     .productSection {
         width: 100%;
     }

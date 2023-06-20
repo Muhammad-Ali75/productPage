@@ -21,9 +21,3 @@
     color: var(--blue);
     border: 1px solid var(--blue);
 }
-
-@media only screen and (width <=1024px) {
-    /* .container {
-        display: none;
-    }*/
-}

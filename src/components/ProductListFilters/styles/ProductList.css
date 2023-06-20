@@ -8,7 +8,7 @@
 
 .product-list-container {}
 
-@media screen and (width<=1024px) {
+@media (width<=1024px) {
   .product-grid-container {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -6,11 +6,9 @@
     border: 0;
     padding: 0.5rem 1.5rem;
     border-radius: 99px;
-
 }
 
-@media screen and (width<=1024px) {
-
+@media (width<=1024px) {
     .categoryContainer {
         display: none;
     }
@@ -26,5 +24,4 @@
     background-color: white;
     padding: 0.5rem 1.5rem;
     border-radius: 99px;
-
 }

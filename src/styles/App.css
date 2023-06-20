@@ -6,16 +6,14 @@
   padding: 0px 6rem;
 }
 
-@media only screen and (width <=1024px) {
-  .App{
+@media (width <=1024px) {
+  .App {
     padding: 0px 2rem;
   }
 }
 
-
-
-@media only screen and (width <=768px) {
-  .App{
+@media (width <=768px) {
+  .App {
     padding: 0px;
   }
 }

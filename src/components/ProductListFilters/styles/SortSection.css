@@ -60,7 +60,7 @@
   background-color: #f2f2f2;
 }
 
-@media screen and (width <=1024px) {
+@media (width <=1024px) {
   .viewContainer {
     display: none;
   }
