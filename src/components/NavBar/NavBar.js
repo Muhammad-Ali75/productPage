@@ -13,7 +13,9 @@ function NavBar() {
   const {
     state: { cart },
   } = useContext(ProductContext);
+
   const navRef = useRef();
+
   const [dropdown, setDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
