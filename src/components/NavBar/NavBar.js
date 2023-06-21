@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { Context as ProductContext } from "../../context/ProductContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsBasket2 } from "react-icons/bs";
 import { HiOutlineChevronDown } from "react-icons/hi";
@@ -9,6 +10,9 @@ import DropDown from "./DorpDown";
 import Button from "./Button";
 
 function NavBar() {
+  const {
+    state: { cart },
+  } = useContext(ProductContext);
   const navRef = useRef();
   const [dropdown, setDropdown] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -46,9 +50,8 @@ function NavBar() {
     }
   };
 
-
   return (
-    <header >
+    <header>
       <div className="navbar-content">
         <img src={logoImage} alt="Logo" className="logo-image" />
         <nav ref={navRef}>
@@ -58,11 +61,17 @@ function NavBar() {
             Buy
           </a>
           <a href="/finance">Financing</a>
-          <div className="about-us"
-            onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+          <div
+            className="about-us"
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+          >
             <div>
               About Us
-              <HiOutlineChevronDown onClick={toggleDropdown} className="downA" />
+              <HiOutlineChevronDown
+                onClick={toggleDropdown}
+                className="downA"
+              />
             </div>
             {dropdown && <DropDown />}
           </div>
@@ -80,6 +89,7 @@ function NavBar() {
           </div>
           <button className="nav nav-btn cart-btn">
             <BsBasket2 />
+            <div className="cart-number">{cart}</div>
           </button>
           <button className="nav-btn" onClick={showNavBar}>
             <FaBars />

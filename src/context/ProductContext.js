@@ -13,13 +13,19 @@ const productReducer = (state, action) => {
         totalPages: action.payload.totalPages,
         all_products: action.payload.all_products,
       };
+    case "add_cart":
+      return { ...state, cart: action.payload.cart };
     case "error":
-      return { ...state, error: action.payload.error };
+      return { ...state, error: action.payload };
 
     default: {
       return state;
     }
   }
+};
+
+const addCart = (dispatch) => (value) => {
+  dispatch({ type: "get_data", payload: value });
 };
 
 const getData =
@@ -74,10 +80,11 @@ const getData =
 
 export const { Provider, Context } = createDataContext(
   productReducer,
-  { getData },
+  { getData, addCart },
   {
     products: [],
     error: null,
+    cart: 0,
     totalPages: 0,
     all_products: 0,
     filters: {
