@@ -26,27 +26,15 @@ function App() {
       <div className="App">
         <SearchBar />
 
-        {products.length !== 0 && (
+        {products.length !== 0 && !error ? (
           <>
             <div className="total-products">
               Products &nbsp;<p>({all_products} Products)</p>
             </div>
             <ProductListFilters />
           </>
-        )}
-        {(products.length === 0 || error) && (
-          <div
-            style={{
-              color: "red",
-              fontSize: 16,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop: 100,
-            }}
-          >
-            No Products to Show
-          </div>
+        ) : (
+          <div className="no-products">No Products to Show</div>
         )}
       </div>
       <Footer />
