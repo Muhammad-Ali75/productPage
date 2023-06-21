@@ -31,7 +31,7 @@ export function generateQuery(filters) {
   }
 
   if (filters.country && filters.country.length > 0) {
-    query.country = filters.country;
+    query.country = { $in: filters.country };
   }
 
   return JSON.stringify(query);
