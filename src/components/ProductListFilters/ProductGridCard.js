@@ -1,3 +1,5 @@
+import { useState, useContext } from "react";
+import { Context as ProductContext } from "../../context/ProductContext";
 import usFlag from "../../assets/usaflag.svg";
 import "./styles/ProductGridCard.css";
 
@@ -11,6 +13,18 @@ function ProductGridCard({
   max_price,
   unit,
 }) {
+  const {
+    state: { cart },
+    addCart,
+  } = useContext(ProductContext);
+  const [disbled, setDisabled] = useState(false);
+
+  function addToCart() {
+    if (!disbled) {
+      setDisabled(true);
+      addCart(cart + 1);
+    }
+  }
   return (
     <div className="gridCardContainer" key={_id}>
       <div className="product-image-container">
@@ -32,7 +46,9 @@ function ProductGridCard({
           $ {max_price ? `${min_price} - $ ${max_price}` : min_price} / {unit}
         </h3>
 
-        <button>Add to cart</button>
+        <button onClick={addToCart} disbled={disbled ? `${disbled}` : ""}>
+          Add to cart
+        </button>
       </div>
     </div>
   );

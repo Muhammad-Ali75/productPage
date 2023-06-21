@@ -1,3 +1,5 @@
+import { useContext, useState } from "react";
+import { Context as ProductContext } from "../../context/ProductContext";
 import "./styles/ProductListCard.css";
 import usFlag from "../../assets/usaflag.svg";
 
@@ -11,6 +13,19 @@ function ProductListCard({
   max_price,
   unit,
 }) {
+  const {
+    state: { cart },
+    addCart,
+  } = useContext(ProductContext);
+  const [disbled, setDisabled] = useState(false);
+
+  function addToCart() {
+    if (!disbled) {
+      setDisabled(true);
+      addCart(cart + 1);
+    }
+  }
+
   return (
     <div className="listCardContainer" key={_id}>
       <div className="list-image-container">
@@ -39,7 +54,13 @@ function ProductListCard({
           $ {max_price ? `${min_price} - $ ${max_price}` : min_price} / Peices
         </h3>
 
-        <button className="addCartBtn">Add to cart</button>
+        <button
+          className="addCartBtn"
+          onClick={addToCart}
+          disbled={disbled ? `${disbled}` : ""}
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );

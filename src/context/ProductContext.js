@@ -14,7 +14,7 @@ const productReducer = (state, action) => {
         all_products: action.payload.all_products,
       };
     case "add_cart":
-      return { ...state, cart: action.payload.cart };
+      return { ...state, cart: action.payload };
     case "error":
       return { ...state, error: action.payload };
 
@@ -25,7 +25,7 @@ const productReducer = (state, action) => {
 };
 
 const addCart = (dispatch) => (value) => {
-  dispatch({ type: "get_data", payload: value });
+  dispatch({ type: "add_cart", payload: value });
 };
 
 const getData =
@@ -71,7 +71,7 @@ const getData =
         dispatch({ type: "get_data", payload: product_data });
       }
 
-      console.log("RESPONSE:::", JSON.stringify(data, null, 2));
+      // console.log("RESPONSE:::", JSON.stringify(data, null, 2));
     } catch (e) {
       console.warn(e);
       dispatch({ type: "error", payload: e.message });
