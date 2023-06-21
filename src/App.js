@@ -26,7 +26,7 @@ function App() {
       <div className="App">
         <SearchBar />
 
-        {products.length !== 0 && !error ? (
+        {products.length !== 0 || !error ? (
           <>
             <div className="total-products">
               Products &nbsp;<p>({all_products} Products)</p>
