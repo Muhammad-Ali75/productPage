@@ -1,7 +1,6 @@
 import { generateQuery, generateSort } from "../utils/functions";
 import createDataContext from "./createDataContext";
 import axios from "axios";
-import "dotenv/config";
 
 const apiURL = process.env.API_URL;
 // context to handle product data
