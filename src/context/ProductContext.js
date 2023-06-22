@@ -43,10 +43,12 @@ const getData =
     stock_in_usa,
   }) => {
     try {
+      // "http://localhost:5000/api/getAllProducts", localHost
       const { data, status } = await axios.get(
-        "http://localhost:5000/api/getAllProducts",
+        "https://product-api-beta.vercel.app/api/getAllProducts",
         {
           params: {
+            limit: 6,
             page,
             keyword,
             sort: generateSort(sort_by),
