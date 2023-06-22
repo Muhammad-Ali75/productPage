@@ -15,6 +15,7 @@
 @media (width<=1024px) {
   .product-list-filter-container {
     flex-direction: column;
+    padding: 0 1rem;
   }
 
   .desktop-filters {
