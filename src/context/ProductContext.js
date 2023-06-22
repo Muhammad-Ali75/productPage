@@ -1,7 +1,9 @@
 import { generateQuery, generateSort } from "../utils/functions";
 import createDataContext from "./createDataContext";
 import axios from "axios";
+import "dotenv/config";
 
+const apiURL = process.env.API_URL;
 // context to handle product data
 const productReducer = (state, action) => {
   switch (action.type) {
@@ -44,26 +46,23 @@ const getData =
   }) => {
     try {
       // "http://localhost:5000/api/getAllProducts", localHost
-      const { data, status } = await axios.get(
-        "https://product-api-beta.vercel.app/api/getAllProducts",
-        {
-          params: {
-            limit: 6,
-            page,
-            keyword,
-            sort: generateSort(sort_by),
-            query: generateQuery({
-              min_price,
-              max_price,
-              moq,
-              product_certificate,
-              supplier_certificate,
-              country,
-              stock_in_usa,
-            }),
-          },
-        }
-      );
+      const { data, status } = await axios.get(apiURL, {
+        params: {
+          limit: 6,
+          page,
+          keyword,
+          sort: generateSort(sort_by),
+          query: generateQuery({
+            min_price,
+            max_price,
+            moq,
+            product_certificate,
+            supplier_certificate,
+            country,
+            stock_in_usa,
+          }),
+        },
+      });
       if (status === 200) {
         const product_data = {
           products: data.docs,
