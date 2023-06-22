@@ -11,7 +11,7 @@ export function generateQuery(filters) {
   }
 
   if (filters.max_price) {
-    query.max_price = { $lte: +filters.max_price };
+    query.min_price = { $lte: +filters.max_price };
   }
 
   if (filters.moq) {
@@ -38,6 +38,7 @@ export function generateQuery(filters) {
 }
 
 export function generateSort(sort_by) {
+  //add sort query based on value selected
   switch (sort_by) {
     case "Latest":
       return "-createdAt";
