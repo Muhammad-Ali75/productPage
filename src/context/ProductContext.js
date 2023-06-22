@@ -2,7 +2,6 @@ import { generateQuery, generateSort } from "../utils/functions";
 import createDataContext from "./createDataContext";
 import axios from "axios";
 
-const apiURL = process.env.API_URL;
 // context to handle product data
 const productReducer = (state, action) => {
   switch (action.type) {
@@ -45,7 +44,7 @@ const getData =
   }) => {
     try {
       // "http://localhost:5000/api/getAllProducts", localHost
-      const { data, status } = await axios.get(apiURL, {
+      const { data, status } = await axios.get(process.env.REACT_APP_API_URL, {
         params: {
           limit: 6,
           page,
