@@ -1,15 +1,18 @@
 import { useContext } from "react";
-import { Context as ProductContext } from "../../context/ProductContext";
+// import { Context as ProductContext } from "../../context/ProductContext";
 import { Context as PleContext } from "../../context/ProductListEnhancement";
 
 import "./styles/FilterSection.css";
 import CheckboxGroup from "./CheckBoxFilters";
 import usFlag from "../../assets/usaflag.svg";
+import { useSelector } from "react-redux";
 
 function FiltersSection() {
-  const {
-    state: { filters },
-  } = useContext(ProductContext);
+  // const {
+  //   state: { filters },
+  // } = useContext(ProductContext);
+  const { filters } = useSelector((state) => state.product);
+
   const {
     state: {
       min_price,

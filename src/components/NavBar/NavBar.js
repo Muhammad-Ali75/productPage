@@ -1,5 +1,5 @@
-import { useContext, useEffect, useRef, useState } from "react";
-import { Context as ProductContext } from "../../context/ProductContext";
+import { useEffect, useRef, useState } from "react";
+// import { Context as ProductContext } from "../../context/ProductContext";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { BsBasket2 } from "react-icons/bs";
 import { HiOutlineChevronDown } from "react-icons/hi";
@@ -8,11 +8,13 @@ import "./styles/navBar.css";
 import logoImage from "../../assets/logo.png";
 import DropDown from "./DorpDown";
 import Button from "./Button";
+import { useSelector } from "react-redux";
 
 function NavBar() {
-  const {
-    state: { cart },
-  } = useContext(ProductContext);
+  // const {
+  //   state: { cart },
+  // } = useContext(ProductContext);
+  const { cart } = useSelector((state) => state.product);
 
   const navRef = useRef();
 

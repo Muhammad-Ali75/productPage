@@ -2,6 +2,8 @@ import { useContext, useState } from "react";
 import { Context as ProductContext } from "../../context/ProductContext";
 import "./styles/ProductListCard.css";
 import usFlag from "../../assets/usaflag.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { addCart } from "../../store/productSlice";
 
 function ProductListCard({
   _id,
@@ -13,16 +15,18 @@ function ProductListCard({
   max_price,
   unit,
 }) {
-  const {
-    state: { cart },
-    addCart,
-  } = useContext(ProductContext);
+  // const {
+  //   state: { cart },
+  //   addCart,
+  // } = useContext(ProductContext);
+  const dispatch = useDispatch();
+
   const [disbled, setDisabled] = useState(false);
 
   function addToCart() {
     if (!disbled) {
       setDisabled(true);
-      addCart(cart + 1);
+      dispatch(addCart());
     }
   }
 

@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Context as PleContext } from "../../context/ProductListEnhancement";
-import { Context as ProductContext } from "../../context/ProductContext";
+// import { Context as ProductContext } from "../../context/ProductContext";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { useSelector } from "react-redux";
 
 function Pagination() {
   const {
@@ -9,9 +10,11 @@ function Pagination() {
     pageChange,
   } = useContext(PleContext);
 
-  const {
-    state: { totalPages },
-  } = useContext(ProductContext);
+  // const {
+  //   state: { totalPages },
+  // } = useContext(ProductContext);
+
+  const { totalPages } = useSelector((state) => state.product);
 
   const handlePageChange = (sign) => {
     if (sign === "+" && page < totalPages) {

@@ -2,12 +2,14 @@ import "./styles/ProductList.css";
 import ProductGridCard from "./ProductGridCard";
 import ProductListCard from "./ProductListCard";
 import { useContext } from "react";
-import { Context as ProductContext } from "../../context/ProductContext";
+import { useSelector } from "react-redux";
+// import { Context as ProductContext } from "../../context/ProductContext";
 
 function ProductList({ view }) {
-  const {
-    state: { products },
-  } = useContext(ProductContext);
+  // const {
+  //   state: { products },
+  // } = useContext(ProductContext);
+  const { products } = useSelector((state) => state.product);
 
   return (
     <div

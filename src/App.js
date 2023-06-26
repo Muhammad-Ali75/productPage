@@ -1,6 +1,8 @@
 import { useEffect, useContext } from "react";
 import { Context as PleContext } from "./context/ProductListEnhancement";
-import { Context as ProductContext } from "./context/ProductContext";
+// import { Context as ProductContext } from "./context/ProductContext";
+import { useSelector, useDispatch } from "react-redux";
+import { getData } from "./store/productActions";
 
 import "./styles/App.css";
 import NavBar from "./components/NavBar/NavBar";
@@ -9,14 +11,19 @@ import ProductListFilters from "./components/ProductListFilters/ProductListFilte
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  const { loading, error, products, all_products } = useSelector(
+    (state) => state.product
+  );
+  const dispatch = useDispatch();
+
   const { state } = useContext(PleContext);
-  const {
-    state: { products, error, all_products },
-    getData,
-  } = useContext(ProductContext);
+  // const {
+  //   state: { products, error, all_products },
+  //   getData,
+  // } = useContext(ProductContext);
 
   useEffect(() => {
-    getData({ ...state });
+    dispatch(getData({ ...state }));
     // eslint-disable-next-line
   }, [state]);
 
@@ -25,8 +32,9 @@ function App() {
       <NavBar />
       <div className="App">
         <SearchBar />
-
-        {products.length !== 0 || !error ? (
+        {loading ? (
+          <div className="no-products">Loading...</div>
+        ) : products.length !== 0 && !error ? (
           <>
             <div className="total-products">
               Products &nbsp;<p>({all_products} Products)</p>
