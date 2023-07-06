@@ -1,4 +1,4 @@
-import "./styles/Footer.css";
+import "./Footer.css";
 import logo from "../../assets/logo.png";
 import visa from "../../assets/visa.png";
 import masterCard from "../../assets/master-card.png";
