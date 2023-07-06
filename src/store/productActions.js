@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { generateQuery, generateSort } from "../utils/functions";
+import ProductApi from "../api/ProductApi";
 
 export const getData = createAsyncThunk(
   "product/getAll",
@@ -20,7 +21,7 @@ export const getData = createAsyncThunk(
     { rejectWithValue }
   ) => {
     try {
-      const { data, status } = await axios.get(process.env.REACT_APP_API_URL, {
+      const { data, status } = await ProductApi.get("/getAllProducts", {
         params: {
           limit: 6,
           page,
