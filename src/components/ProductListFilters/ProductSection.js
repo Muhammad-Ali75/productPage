@@ -7,8 +7,8 @@ import Pagination from "./Pagination";
 function ProductSection() {
   const [view, setView] = useState("grid");
 
-  function handleSet(v) {
-    setView(() => v);
+  function handleSet(value) {
+    setView(() => value);
   }
 
   return (

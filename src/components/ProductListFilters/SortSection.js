@@ -5,17 +5,23 @@ import SortDropdown from "./SortDropdown";
 import Pagination from "./Pagination";
 
 function SortSection({ view, set }) {
+  function handleSet(event) {
+    set(event.currentTarget.dataset.view);
+  }
+
   return (
     <div className="sortContainer">
       <div className="viewContainer">
         <BsFillGrid3X2GapFill
           className={view === "grid" ? "" : "deativated"}
-          onClick={() => set("grid")}
+          onClick={handleSet}
+          data-view="grid"
         />
         <FaList
           className={view === "list" ? "" : "deativated"}
           style={{ fontSize: 22 }}
-          onClick={() => set("list")}
+          onClick={handleSet}
+          data-view="list"
         />
       </div>
       <div className="sortPagination">

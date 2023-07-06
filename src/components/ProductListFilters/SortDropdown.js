@@ -12,12 +12,12 @@ function SortDropdown() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(() => !isOpen);
   };
 
-  const handleOptionSelect = (option) => {
-    sortByChange(option);
-    setIsOpen(false);
+  const handleOptionSelect = (event) => {
+    sortByChange(event.currentTarget.dataset.sort);
+    setIsOpen(() => false);
   };
 
   return (
@@ -38,18 +38,22 @@ function SortDropdown() {
       </div>
       {isOpen && (
         <ul className="sortDropdownList">
-          <li onClick={() => handleOptionSelect("Relevence")}>Relevence</li>
-          <li onClick={() => handleOptionSelect("Latest")}>Latest</li>
-          <li onClick={() => handleOptionSelect("Price Low to High")}>
+          <li data-sort="Relevence" onClick={handleOptionSelect}>
+            Relevence
+          </li>
+          <li data-sort="Latest" onClick={handleOptionSelect}>
+            Latest
+          </li>
+          <li data-sort="Price Low to High" onClick={handleOptionSelect}>
             Price Low to High
           </li>
-          <li onClick={() => handleOptionSelect("Price High to Low")}>
+          <li data-sort="Price High to Low" onClick={handleOptionSelect}>
             Price High to Low
           </li>
-          <li onClick={() => handleOptionSelect("MOQ Low to High")}>
+          <li data-sort="MOQ Low to High" onClick={handleOptionSelect}>
             MOQ Low to High
           </li>
-          <li onClick={() => handleOptionSelect("Ratings High to Low")}>
+          <li data-sort="Ratings High to Low" onClick={handleOptionSelect}>
             Ratings High to Low
           </li>
         </ul>

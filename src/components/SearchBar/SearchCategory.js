@@ -7,12 +7,12 @@ const SearchCategory = () => {
   const [selectedOption, setSelectedOption] = useState("");
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(() => !isOpen);
   };
 
-  const handleOptionSelect = (option) => {
-    setSelectedOption(option);
-    setIsOpen(false);
+  const handleOptionSelect = (event) => {
+    setSelectedOption(event.currentTarget.dataset.category);
+    setIsOpen(() => false);
   };
 
   return (
@@ -31,25 +31,37 @@ const SearchCategory = () => {
       </div>
       {isOpen && (
         <ul className="dropdownList">
-          <li onClick={() => handleOptionSelect("All Categories")}>
+          <li data-category="All Categories" onClick={handleOptionSelect}>
             All Categories
           </li>
-          <li onClick={() => handleOptionSelect("PPE")}>PPE</li>
-          <li onClick={() => handleOptionSelect("Health & Medical")}>
+          <li data-category="PPE" onClick={handleOptionSelect}>
+            PPE
+          </li>
+          <li data-category="Health & Medical" onClick={handleOptionSelect}>
             Health & Medical
           </li>
-          <li onClick={() => handleOptionSelect("Garden & Outdoor")}>
+          <li data-category="Garden & Outdoor" onClick={handleOptionSelect}>
             Garden & Outdoor
           </li>
-          <li onClick={() => handleOptionSelect("Sports & Fiteness")}>
+          <li data-category="Sports & Fiteness" onClick={handleOptionSelect}>
             Sports & Fiteness
           </li>
-          <li onClick={() => handleOptionSelect("Other")}>Other</li>
-          <li onClick={() => handleOptionSelect("Baby")}>Baby</li>
-          <li onClick={() => handleOptionSelect("Beauty & Personal Care")}>
+          <li data-category="Other" onClick={handleOptionSelect}>
+            Other
+          </li>
+          <li data-category="Baby" onClick={handleOptionSelect}>
+            Baby
+          </li>
+          <li
+            data-category="Beauty & Personal Care"
+            onClick={handleOptionSelect}
+          >
             Beauty & Personal Care
           </li>
-          <li onClick={() => handleOptionSelect("Home, Kitchen & Office")}>
+          <li
+            data-category="Home, Kitchen & Office"
+            onClick={handleOptionSelect}
+          >
             Home, Kitchen & Office
           </li>
         </ul>

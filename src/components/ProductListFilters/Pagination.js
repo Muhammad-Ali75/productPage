@@ -16,7 +16,13 @@ function Pagination() {
 
   const { totalPages } = useSelector((state) => state.product);
 
-  const handlePageChange = (sign) => {
+  const handlePageChange = (event) => {
+    const {
+      currentTarget: {
+        dataset: { sign },
+      },
+    } = event;
+
     if (sign === "+" && page < totalPages) {
       pageChange(page + 1);
     } else if (sign === "-" && page > 1) {
@@ -25,14 +31,14 @@ function Pagination() {
   };
   return (
     <div className="paginationContainer">
-      <button onClick={() => handlePageChange("-")}>
+      <button data-sign="-" onClick={handlePageChange}>
         <FiChevronLeft />
       </button>
 
       <div className="currentPage">{page}</div>
       <p style={{ display: "flex" }}>of {totalPages}</p>
 
-      <button onClick={() => handlePageChange("+")}>
+      <button data-sign="+" onClick={handlePageChange}>
         <FiChevronRight />
       </button>
     </div>
