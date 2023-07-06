@@ -8,7 +8,7 @@ function ProductSection() {
   const [view, setView] = useState("grid");
 
   function handleSet(v) {
-    setView(v);
+    setView(() => v);
   }
 
   return (

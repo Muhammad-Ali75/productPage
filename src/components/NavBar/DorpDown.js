@@ -4,7 +4,9 @@ import "./styles/dropDown.css";
 function DropDown() {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
+  function handleClick() {
+    setClick(() => !click);
+  }
 
   return (
     <>
@@ -12,8 +14,8 @@ function DropDown() {
         onClick={handleClick}
         className={click ? "dropdown-menu clicked" : "dropdown-menu"}
       >
-        <li onClick={() => setClick(false)}>Our Story</li>
-        <li onClick={() => setClick(false)}>How to Buy</li>
+        <li onClick={handleClick}>Our Story</li>
+        <li onClick={handleClick}>How to Buy</li>
       </ul>
     </>
   );

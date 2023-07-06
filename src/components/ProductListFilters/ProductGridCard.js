@@ -27,7 +27,7 @@ function ProductGridCard({
 
   function addToCart() {
     if (!disbled) {
-      setDisabled(true);
+      setDisabled(() => true);
       dispatch(addCart());
     }
   }

@@ -39,18 +39,18 @@ function NavBar() {
   }
 
   function toggleDropdown() {
-    setDropdown(!dropdown);
+    setDropdown(() => !dropdown);
   }
 
   const onMouseEnter = () => {
     if (!isMobile) {
-      setDropdown(true);
+      setDropdown(() => true);
     }
   };
 
   const onMouseLeave = () => {
     if (!isMobile) {
-      setDropdown(false);
+      setDropdown(() => false);
     }
   };
 

@@ -9,15 +9,11 @@ function CheckboxGroup({
   selectedValues,
   onChange,
 }) {
-  const [show, setShow] = useState(`Show All (${options.length})`);
+  const [show, setShow] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
   function handleShow() {
-    if (show === `Show All (${options.length})`) {
-      setShow("Show Less");
-    } else {
-      setShow(`Show All (${options.length})`);
-    }
+    setShow(() => !show);
   }
 
   const handleCheckboxChange = (event) => {
@@ -51,9 +47,7 @@ function CheckboxGroup({
       </div>
       <div
         className={
-          show === `Show All (${options.length})` && options.length > 6
-            ? "check-list"
-            : "check-list show-list"
+          !show && options.length > 6 ? "check-list" : "check-list show-list"
         }
       >
         {filteredOptions.length !== 0 ? (
@@ -74,7 +68,11 @@ function CheckboxGroup({
           <p className="error-text">No Results Found</p>
         )}
       </div>
-      {options.length > 6 && <p onClick={handleShow}>{show}</p>}
+      {options.length > 6 && (
+        <p onClick={handleShow}>
+          {show ? "Show less" : `Show all (${options.length})`}
+        </p>
+      )}
     </div>
   );
 }

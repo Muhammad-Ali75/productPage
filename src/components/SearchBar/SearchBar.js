@@ -8,7 +8,7 @@ function SearchBar() {
   const [open, setOpen] = useState(false);
 
   function handleSetOpen() {
-    setOpen(!open);
+    setOpen(() => !open);
   }
 
   return (

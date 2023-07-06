@@ -7,7 +7,7 @@ function ProductListFilters() {
   const [dropdown, setDropdown] = useState(false);
 
   function toggleDropdown() {
-    setDropdown(!dropdown);
+    setDropdown(() => !dropdown);
   }
 
   return (
